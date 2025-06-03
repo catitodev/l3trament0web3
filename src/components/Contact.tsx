@@ -58,7 +58,7 @@ const Contact = () => {
             
             <div className="space-y-6">
               <a 
-                href="https://wa.me/5522999999999" 
+                href="https://wa.me/5522988324416" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary-50 transition"
@@ -88,8 +88,8 @@ const Contact = () => {
               </a>
               
               <a 
-                href="https://t.me/calangoflux" 
-                target="_blank" 
+                href="https://t.me/calangoflux_ubot" 
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-accent-50 transition"
               >
