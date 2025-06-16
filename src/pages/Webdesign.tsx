@@ -7,7 +7,7 @@ const Webdesign = () => {
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
-    
+
     // Set page title
     document.title = 'Webdesign Completo | CalangoFlux';
   }, []);
@@ -20,7 +20,7 @@ const Webdesign = () => {
             <ArrowLeft size={16} className="mr-2" />
             Voltar para início
           </Link>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -30,9 +30,9 @@ const Webdesign = () => {
             <p className="text-xl max-w-3xl mb-8">
               Cuidamos de tudo: identidade visual, branding, design UX/UI, domínio e publicação do site. Sites responsivos, leves e conectados com automações e IA, já prontos para divulgar, vender ou captar.
             </p>
-            <a 
-              href="https://wa.me/5522999999999" 
-              target="_blank" 
+            <a
+              href="https://wa.me/5522988324416"
+              target="_blank"
               rel="noopener noreferrer"
               className="btn bg-white text-primary-600 hover:bg-white/90"
             >
@@ -41,7 +41,7 @@ const Webdesign = () => {
           </motion.div>
         </div>
       </section>
-      
+
       <section className="section bg-white">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -60,7 +60,7 @@ const Webdesign = () => {
                 Todos os nossos projetos são desenvolvidos com foco em responsividade, acessibilidade e otimização para mecanismos de busca (SEO).
               </p>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -103,7 +103,7 @@ const Webdesign = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="section bg-gray-50">
         <div className="container">
           <motion.div
@@ -116,7 +116,7 @@ const Webdesign = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-secondary-800 mb-4">O que incluímos</h2>
             <div className="w-16 h-1 bg-primary-500 mx-auto"></div>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -133,7 +133,7 @@ const Webdesign = () => {
                 <li>• Guia de estilo</li>
               </ul>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -149,7 +149,7 @@ const Webdesign = () => {
                 <li>• Testes de usabilidade</li>
               </ul>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -165,7 +165,7 @@ const Webdesign = () => {
                 <li>• Testes em múltiplos dispositivos</li>
               </ul>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -181,7 +181,7 @@ const Webdesign = () => {
                 <li>• Estruturação de informações</li>
               </ul>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -197,7 +197,7 @@ const Webdesign = () => {
                 <li>• Ferramentas de análise</li>
               </ul>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -216,7 +216,7 @@ const Webdesign = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="section bg-white">
         <div className="container">
           <div className="bg-primary-50 rounded-xl p-8 md:p-12">
@@ -228,17 +228,20 @@ const Webdesign = () => {
                 Entre em contato para uma consulta gratuita. Vamos entender seus objetivos e criar um projeto web sob medida para seu negócio.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <a 
-                  href="https://wa.me/5522999999999" 
-                  target="_blank" 
+                <a
+                  href="https://wa.me/5522999999999"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-primary"
                 >
                   Quero meu site
                 </a>
-                <Link to="/#contato" className="btn btn-outline">
+                <a href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline">
                   Fale conosco
-                </Link>
+                </a>
               </div>
             </div>
           </div>

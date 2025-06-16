@@ -48,9 +48,7 @@ const Hero = () => {
               Conheça nossos serviços
             </button>
             <a 
-              href="https://wa.me/5522999999999" 
-              target="_blank" 
-              rel="noopener noreferrer"
+              href="#contato" 
               className="btn btn-outline"
             >
               Fale conosco

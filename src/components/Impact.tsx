@@ -67,9 +67,9 @@ const Impact = () => {
               <div className="bg-primary-500/20 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-primary-300">
                 <ShieldCheck size={24} />
               </div>
-              <h3 className="text-lg font-semibold mb-2">Justiça Digital</h3>
+              <h3 className="text-lg font-semibold mb-2">Acessibilidade Digital</h3>
               <p className="text-gray-300">
-                Combatemos a exclusão digital com soluções acessíveis e conhecimento compartilhado, fomentando a soberania tecnológica.
+               Incentivamos a inclusão digital com soluções acessíveis e conhecimento compartilhado, fomentando o empoderamento e bom uso tecnológico.
               </p>
             </motion.div>
           </div>
@@ -81,7 +81,7 @@ const Impact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            Transparência, autonomia e justiça digital fazem parte do nosso DNA.
+            Transparência, autonomia e acessibilidade digital fazem parte do nosso DNA.
           </motion.p>
         </div>
       </div>
