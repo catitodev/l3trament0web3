@@ -31,7 +31,7 @@ const Agentics = () => {
               Desenvolvemos sistemas autônomos com IA que tomam decisões, aprendem com dados e executam ações com base em critérios definidos. São agentes inteligentes para gestão, atendimento, curadoria ou operação.
             </p>
             <a 
-              href="https://wa.me/5522999999999" 
+              href="https://wa.me/5522988324416" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn bg-white text-accent-600 hover:bg-white/90"
@@ -205,16 +205,16 @@ const Agentics = () => {
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <a 
-                  href="https://wa.me/5522999999999" 
+                  href="https://wa.me/5522988324416" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="btn btn-accent"
                 >
                   Criar meu Agentic
                 </a>
-                <Link to="/#contato" className="btn btn-outline border-accent-500 text-accent-500 hover:bg-accent-50">
+                <a href="/#contato" className="btn btn-outline border-accent-500 text-accent-500 hover:bg-accent-50">
                   Fale conosco
-                </Link>
+                </a>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { Bot, Cpu, Terminal, Laptop, Database } from 'lucide-react';
+import { Bot, Cpu, Terminal, Laptop, BrainCircuit } from 'lucide-react';
 import ServiceCard from './ServiceCard';
 import { motion } from 'framer-motion';
 
@@ -58,9 +58,9 @@ const Services = () => {
           />
           
           <ServiceCard
-            title="DAOs e Web3"
+            title="Letramento Web3"
             description="Criamos organizações descentralizadas com contratos inteligentes, tokens e governança participativa. Fazemos letramento Web3, infraestrutura segura e NFTs funcionais."
-            icon={<Database size={24} />}
+            icon={<BrainCircuit size={24} />}
             color="secondary"
             linkTo="/daos-web3"
             delay={0.5}

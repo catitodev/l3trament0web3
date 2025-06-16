@@ -35,9 +35,8 @@ const ServiceCard = ({ title, description, icon, color, linkTo, delay = 0 }: Ser
       <div className="bg-white p-4 mt-auto">
         <div className="flex flex-col sm:flex-row gap-3">
           <a
-            href="https://wa.me/5522999999999"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contato"
+            
             className="btn btn-primary text-sm px-4 py-2"
           >
             Contratar

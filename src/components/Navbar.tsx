@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Menu, X, Cpu, Wifi } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   isScrolled: boolean;
@@ -24,8 +24,7 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <div className="flex items-center text-primary-600">
-            <Cpu size={28} className="mr-1" />
-            <Wifi size={24} />
+            <img className="w-10" src="../src/assets/imagens/calangoicone.png" alt="Icone da CalangoFlux" />
           </div>
           <span className="ml-2 font-heading font-bold text-xl">
             Calango<span className="text-secondary-500">Flux</span>
@@ -47,7 +46,7 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
             Início
           </NavLink>
           <a 
-            href="/#sobre" 
+            href="#sobre" 
             className={`text-sm font-medium transition ${
               isScrolled ? 'text-gray-800 hover:text-primary-500' : 'text-gray-800 hover:text-primary-500'
             }`}
@@ -55,7 +54,7 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
             Sobre
           </a>
           <a 
-            href="/#servicos" 
+            href="#servicos" 
             className={`text-sm font-medium transition ${
               isScrolled ? 'text-gray-800 hover:text-primary-500' : 'text-gray-800 hover:text-primary-500'
             }`}
@@ -63,7 +62,8 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
             Serviços
           </a>
           <a 
-            href="/#impacto" 
+            href="#impacto" 
+            
             className={`text-sm font-medium transition ${
               isScrolled ? 'text-gray-800 hover:text-primary-500' : 'text-gray-800 hover:text-primary-500'
             }`}
@@ -71,7 +71,7 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
             Impacto
           </a>
           <a 
-            href="/#contato" 
+            href="#contato" 
             className={`text-sm font-medium transition ${
               isScrolled ? 'text-gray-800 hover:text-primary-500' : 'text-gray-800 hover:text-primary-500'
             }`}
@@ -81,9 +81,7 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
         </nav>
 
         <a 
-          href="https://wa.me/5522999999999" 
-          target="_blank" 
-          rel="noopener noreferrer"
+          href="#contato"
           className="hidden md:flex btn btn-primary"
         >
           Fale Conosco
@@ -113,14 +111,14 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
               Início
             </NavLink>
             <a 
-              href="/#sobre" 
+              href="#sobre" 
               className="text-base font-medium py-2 text-gray-800"
               onClick={toggleMenu}
             >
               Sobre
             </a>
             <a 
-              href="/#servicos" 
+              href="#servicos" 
               className="text-base font-medium py-2 text-gray-800"
               onClick={toggleMenu}
             >

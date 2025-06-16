@@ -5,7 +5,7 @@ import AgentesAI from './pages/AgentesAI';
 import Automacoes from './pages/Automacoes';
 import Agentics from './pages/Agentics';
 import Webdesign from './pages/Webdesign';
-import DaosWeb3 from './pages/DaosWeb3';
+import DaosWeb3 from './pages/LetramentoWeb3';
 
 function App() {
   return (

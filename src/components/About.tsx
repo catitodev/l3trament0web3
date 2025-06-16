@@ -24,7 +24,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="text-lg text-gray-700 mb-6">
-              Somos uma Startup DAO SaaS Agentic que une automação, inteligência artificial e comunicação com impacto positivo.
+              Construindo SaaS Agentic que une automação, inteligência artificial e comunicação com impacto positivo real.
             </p>
             <p className="text-lg text-gray-700 mb-6">
               Trabalhamos de forma nômade, descentralizada e regenerativa, criando soluções tecnológicas acessíveis para coletivos, empreendedores, agentes públicos e projetos com propósito.
@@ -36,7 +36,7 @@ const About = () => {
           
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <motion.div 
-              className="bg-primary-50 p-6 rounded-xl"
+              className="bg-primary-50 p-6 rounded-xl flex flex-col items-center text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -50,7 +50,7 @@ const About = () => {
             </motion.div>
             
             <motion.div 
-              className="bg-secondary-50 p-6 rounded-xl"
+              className="bg-secondary-50 p-6 rounded-xl flex flex-col items-center text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -64,7 +64,7 @@ const About = () => {
             </motion.div>
             
             <motion.div 
-              className="bg-accent-50 p-6 rounded-xl"
+              className="bg-accent-50 p-6 rounded-xl flex flex-col items-center text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

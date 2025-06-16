@@ -28,7 +28,7 @@ const Automacoes = () => {
           >
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Automações com IA</h1>
             <p className="text-xl max-w-3xl mb-8">
-              Integramos IA com plataformas como Notion, Google Drive, WhatsApp e n8n. Criamos fluxos automatizados que reduzem trabalho manual e aumentam a eficiência do seu negócio.
+              Integramos IA com plataformas como Notion, Google Drive, WhatsApp, Telegram e n8n. Criamos fluxos automatizados que reduzem trabalho manual e aumentam a eficiência do seu negócio.
             </p>
             <a 
               href="https://wa.me/5522999999999" 

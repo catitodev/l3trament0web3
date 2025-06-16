@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MessageSquare, FileText, Send } from 'lucide-react';
+import { MessageSquare, PackageOpen, Send } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -73,22 +73,22 @@ const Contact = () => {
               </a>
               
               <a 
-                href="https://notion.site/calangoflux" 
+                href="https://discord.gg/NjJeB285" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-secondary-50 transition"
               >
                 <div className="bg-secondary-100 w-12 h-12 rounded-full flex items-center justify-center mr-4 text-secondary-600">
-                  <FileText size={24} />
+                  <PackageOpen size={24} />
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-900">Portfólio Notion</h4>
-                  <p className="text-gray-600">Conheça nossos projetos anteriores</p>
+                  <h4 className="font-medium text-gray-900">Discord</h4>
+                  <p className="text-gray-600">Conheça nossa comunidade</p>
                 </div>
               </a>
               
               <a 
-                href="https://t.me/calangoflux_ubot" 
+                href="https://t.me/+Uh2Uc5-lNogxMDJh" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-accent-50 transition"

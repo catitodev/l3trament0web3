@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Instagram, Github, Send, Wallet } from 'lucide-react';
+import { Instagram, Github, Send, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -38,7 +38,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/daos-web3" className="text-gray-300 hover:text-primary-300 transition">
-                  DAOs e Web3
+                  Letramento Web3
                 </Link>
               </li>
             </ul>
@@ -63,8 +63,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://notion.site/calangoflux" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary-300 transition">
-                  Portfólio
+                <a href="https://discord.gg/NjJeB285" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary-300 transition">
+                  Comunidade
                 </a>
               </li>
             </ul>
@@ -86,8 +86,8 @@ const Footer = () => {
             <a href="https://t.me/calangoflux" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition" aria-label="Telegram">
               <Send size={20} />
             </a>
-            <a href="https://app.ens.domains/name/calangoflux.eth" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition" aria-label="ENS Wallet">
-              <Wallet size={20} />
+            <a href="https://youtube.com/@calangoflux?si=5kA1MkuPTCBUjCOs" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition" aria-label="ENS Wallet">
+              <Youtube size={20} />
             </a>
           </div>
         </div>

@@ -31,7 +31,7 @@ const AgentesAI = () => {
               Criamos bots sob medida para Telegram, Discord, WhatsApp, sites e apps. Eles respondem automaticamente, ajudam com vendas, suporte, educação ou qualquer fluxo específico do seu negócio.
             </p>
             <a 
-              href="https://wa.me/5522999999999" 
+              href="https://wa.me/5522988324416" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn bg-white text-primary-600 hover:bg-white/90"
@@ -211,16 +211,16 @@ const AgentesAI = () => {
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <a 
-                  href="https://wa.me/5522999999999" 
+                  href="https://wa.me/5522988324416" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="btn btn-primary"
                 >
                   Solicitar orçamento
                 </a>
-                <Link to="/#contato" className="btn btn-outline">
+                <a href="/#contato" className="btn btn-outline">
                   Fale conosco
-                </Link>
+                </a>
               </div>
             </div>
           </div>
