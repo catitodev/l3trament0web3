@@ -1,3 +1,4 @@
+import calangoicone from '../assets/imagens/calangoicone.png';
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -22,9 +23,9 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/" className="flex items-center">
+        <Link to="/#inicio" className="flex items-center">
           <div className="flex items-center text-primary-600">
-            <img className="w-10" src="../src/assets/imagens/calangoicone.png" alt="Icone da CalangoFlux" />
+            <img className="w-10" src={calangoicone} alt="Icone da CalangoFlux" />
           </div>
           <span className="ml-2 font-heading font-bold text-xl">
             Calango<span className="text-secondary-500">Flux</span>
