@@ -13,27 +13,33 @@ import Community from './pages/Community';
 import Impact from './pages/Impact';
 import GamificationDemo from './components/gamification/GamificationDemo';
 
+const AppContent: React.FC = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="digital-literacy" element={<DigitalLiteracy />} />
+          <Route path="public-goods" element={<PublicGoods />} />
+          <Route path="commons-life" element={<CommonsLife />} />
+          <Route path="abundant-relationships" element={<AbundantRelationships />} />
+          <Route path="refi" element={<ReFi />} />
+          <Route path="journey" element={<Journey />} />
+          <Route path="community" element={<Community />} />
+          <Route path="impact" element={<Impact />} />
+        </Route>
+        
+        {/* Rota para gamificação */}
+        <Route path="/gamification-demo" element={<GamificationDemo />} />
+      </Routes>
+    </Router>
+  );
+};
+
 const App: React.FC = () => {
   return (
     <WalletProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="digital-literacy" element={<DigitalLiteracy />} />
-            <Route path="public-goods" element={<PublicGoods />} />
-            <Route path="commons-life" element={<CommonsLife />} />
-            <Route path="abundant-relationships" element={<AbundantRelationships />} />
-            <Route path="refi" element={<ReFi />} />
-            <Route path="journey" element={<Journey />} />
-            <Route path="community" element={<Community />} />
-            <Route path="impact" element={<Impact />} />
-          </Route>
-          
-          {/* Rota para gamificação */}
-          <Route path="/gamification-demo" element={<GamificationDemo />} />
-        </Routes>
-      </Router>
+      <AppContent />
     </WalletProvider>
   );
 };

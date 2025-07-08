@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X, BookOpen, Wallet, Zap } from 'lucide-react';
-import { useWallet } from './wallet/WalletProvider';
 
 interface NavbarProps {
   isScrolled: boolean;
@@ -9,7 +8,6 @@ interface NavbarProps {
 
 const Navbar = ({ isScrolled }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { tonConnected, metamaskConnected, tonWallet, metamaskWallet } = useWallet();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -19,7 +17,25 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
     return `${address.slice(0, 4)}...${address.slice(-4)}`;
   };
 
-  const isWalletConnected = tonConnected || metamaskConnected;
+  // Safe wallet hook usage
+  let walletData = {
+    tonConnected: false,
+    metamaskConnected: false,
+    tonWallet: null as any,
+    metamaskWallet: null as any
+  };
+
+  try {
+    // Try to use wallet provider if available
+    const { useWallet } = require('./wallet/WalletProvider');
+    const { tonConnected, metamaskConnected, tonWallet, metamaskWallet } = useWallet();
+    walletData = { tonConnected, metamaskConnected, tonWallet, metamaskWallet };
+  } catch (error) {
+    // Fallback to default values if wallet provider is not available
+    console.warn('Wallet provider not available, using default values');
+  }
+
+  const isWalletConnected = walletData.tonConnected || walletData.metamaskConnected;
 
   return (
     <header 
@@ -84,19 +100,19 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
           {/* Wallet Status */}
           {isWalletConnected && (
             <div className="flex items-center gap-2 px-3 py-2 glass-dark rounded-xl">
-              {tonConnected && (
+              {walletData.tonConnected && (
                 <div className="flex items-center gap-2">
                   <Zap className="w-4 h-4 text-neon-blue" />
                   <span className="text-sm text-gray-300">
-                    {formatAddress(tonWallet?.account?.address || '')}
+                    {formatAddress(walletData.tonWallet?.account?.address || '')}
                   </span>
                 </div>
               )}
-              {metamaskConnected && (
+              {walletData.metamaskConnected && (
                 <div className="flex items-center gap-2">
                   <Wallet className="w-4 h-4 text-neon-orange" />
                   <span className="text-sm text-gray-300">
-                    {formatAddress(metamaskWallet?.address || '')}
+                    {formatAddress(walletData.metamaskWallet?.address || '')}
                   </span>
                 </div>
               )}
@@ -132,19 +148,19 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
                   <div className="w-2 h-2 bg-neon-green rounded-full animate-pulse"></div>
                   <span className="text-sm text-gray-300">Carteira Conectada</span>
                 </div>
-                {tonConnected && (
+                {walletData.tonConnected && (
                   <div className="flex items-center gap-2 text-sm">
                     <Zap className="w-4 h-4 text-neon-blue" />
                     <span className="text-gray-300">
-                      TON: {formatAddress(tonWallet?.account?.address || '')}
+                      TON: {formatAddress(walletData.tonWallet?.account?.address || '')}
                     </span>
                   </div>
                 )}
-                {metamaskConnected && (
+                {walletData.metamaskConnected && (
                   <div className="flex items-center gap-2 text-sm">
                     <Wallet className="w-4 h-4 text-neon-orange" />
                     <span className="text-gray-300">
-                      ETH: {formatAddress(metamaskWallet?.address || '')}
+                      ETH: {formatAddress(walletData.metamaskWallet?.address || '')}
                     </span>
                   </div>
                 )}

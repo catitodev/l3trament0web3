@@ -1,6 +1,4 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { TonConnectUI } from '@tonconnect/ui-react';
-import detectEthereumProvider from '@metamask/detect-provider';
 
 interface WalletContextType {
   // TON Wallet
@@ -38,10 +36,7 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
   // TON Wallet State
   const [tonWallet, setTonWallet] = useState<any>(null);
   const [tonConnected, setTonConnected] = useState(false);
-  const [tonConnectUI] = useState(new TonConnectUI({
-    manifestUrl: 'https://l3trament0web3.vercel.app/tonconnect-manifest.json',
-    buttonRootId: 'ton-connect-button'
-  }));
+  const [tonConnectUI, setTonConnectUI] = useState<any>(null);
 
   // MetaMask State
   const [metamaskWallet, setMetamaskWallet] = useState<any>(null);
@@ -51,8 +46,31 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
   const [isConnecting, setIsConnecting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Initialize TON Connect UI safely
+  useEffect(() => {
+    const initTonConnect = async () => {
+      try {
+        const { TonConnectUI } = await import('@tonconnect/ui-react');
+        const tonUI = new TonConnectUI({
+          manifestUrl: 'https://l3trament0web3.vercel.app/tonconnect-manifest.json',
+          buttonRootId: 'ton-connect-button'
+        });
+        setTonConnectUI(tonUI);
+      } catch (err) {
+        console.warn('TON Connect UI not available:', err);
+      }
+    };
+
+    initTonConnect();
+  }, []);
+
   // TON Wallet Functions
   const connectTon = async () => {
+    if (!tonConnectUI) {
+      setError('TON Connect não está disponível');
+      return;
+    }
+
     try {
       setIsConnecting(true);
       setError(null);
@@ -73,6 +91,8 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
   };
 
   const disconnectTon = async () => {
+    if (!tonConnectUI) return;
+
     try {
       await tonConnectUI.disconnect();
       setTonWallet(null);
@@ -90,13 +110,12 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
       setIsConnecting(true);
       setError(null);
 
-      const provider = await detectEthereumProvider();
-      
-      if (!provider) {
+      // Check if MetaMask is available
+      if (typeof window === 'undefined' || !window.ethereum) {
         throw new Error('MetaMask não encontrado. Por favor, instale a extensão.');
       }
 
-      const ethereum = provider as any;
+      const ethereum = window.ethereum as any;
       
       // Request account access
       const accounts = await ethereum.request({
@@ -135,21 +154,41 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
 
   // Initialize connections on mount
   useEffect(() => {
+    // Check for existing connections only after component mounts
+    if (typeof window === 'undefined') return;
+
     // Check for existing TON connection
-    const tonConnected = localStorage.getItem('tonWalletConnected');
-    if (tonConnected && tonConnectUI.wallet) {
+    const tonConnectedStored = localStorage.getItem('tonWalletConnected');
+    if (tonConnectedStored && tonConnectUI?.wallet) {
       setTonWallet(tonConnectUI.wallet);
       setTonConnected(true);
     }
 
     // Check for existing MetaMask connection
-    const metamaskConnected = localStorage.getItem('metamaskWalletConnected');
-    if (metamaskConnected) {
-      connectMetamask();
+    const metamaskConnectedStored = localStorage.getItem('metamaskWalletConnected');
+    if (metamaskConnectedStored && window.ethereum) {
+      // Try to reconnect MetaMask silently
+      window.ethereum.request({ method: 'eth_accounts' })
+        .then((accounts: string[]) => {
+          if (accounts.length > 0) {
+            setMetamaskWallet({
+              address: accounts[0],
+              provider: window.ethereum
+            });
+            setMetamaskConnected(true);
+          }
+        })
+        .catch(() => {
+          // Silent fail - just don't auto-reconnect
+        });
     }
+  }, [tonConnectUI]);
 
-    // Listen for TON wallet changes
-    const unsubscribe = tonConnectUI.onStatusChange(wallet => {
+  // Listen for TON wallet changes
+  useEffect(() => {
+    if (!tonConnectUI) return;
+
+    const unsubscribe = tonConnectUI.onStatusChange((wallet: any) => {
       if (wallet) {
         setTonWallet(wallet);
         setTonConnected(true);
@@ -162,29 +201,38 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
     return () => {
       unsubscribe();
     };
-  }, []);
+  }, [tonConnectUI]);
 
   // Listen for MetaMask account changes
   useEffect(() => {
-    if (metamaskWallet?.provider) {
-      const handleAccountsChanged = (accounts: string[]) => {
-        if (accounts.length === 0) {
-          disconnectMetamask();
-        } else {
-          setMetamaskWallet(prev => ({
-            ...prev,
-            address: accounts[0]
-          }));
-        }
-      };
+    if (typeof window === 'undefined' || !window.ethereum) return;
 
-      metamaskWallet.provider.on('accountsChanged', handleAccountsChanged);
+    const handleAccountsChanged = (accounts: string[]) => {
+      if (accounts.length === 0) {
+        disconnectMetamask();
+      } else {
+        setMetamaskWallet((prev: any) => ({
+          ...prev,
+          address: accounts[0]
+        }));
+      }
+    };
+
+    const handleChainChanged = () => {
+      // Reload page on chain change
+      window.location.reload();
+    };
+
+    if (metamaskConnected) {
+      window.ethereum.on('accountsChanged', handleAccountsChanged);
+      window.ethereum.on('chainChanged', handleChainChanged);
       
       return () => {
-        metamaskWallet.provider.removeListener('accountsChanged', handleAccountsChanged);
+        window.ethereum.removeListener('accountsChanged', handleAccountsChanged);
+        window.ethereum.removeListener('chainChanged', handleChainChanged);
       };
     }
-  }, [metamaskWallet]);
+  }, [metamaskConnected]);
 
   const value: WalletContextType = {
     // TON
@@ -210,3 +258,10 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
     </WalletContext.Provider>
   );
 };
+
+// Extend window interface for MetaMask
+declare global {
+  interface Window {
+    ethereum?: any;
+  }
+}
