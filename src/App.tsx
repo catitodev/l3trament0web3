@@ -12,6 +12,7 @@ import Journey from './pages/Journey';
 import Community from './pages/Community';
 import Impact from './pages/Impact';
 import GamificationDemo from './components/gamification/GamificationDemo';
+import Bloco1 from './pages/Bloco1';
 
 const AppContent: React.FC = () => {
   return (
@@ -27,6 +28,7 @@ const AppContent: React.FC = () => {
           <Route path="journey" element={<Journey />} />
           <Route path="community" element={<Community />} />
           <Route path="impact" element={<Impact />} />
+          <Route path="trilha/bloco-1" element={<Bloco1 />} />
         </Route>
         
         {/* Rota para gamificação */}
