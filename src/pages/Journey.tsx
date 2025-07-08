@@ -1,140 +1,186 @@
 import React, { useState } from 'react';
-import { Play, Clock, Users, Award, CheckCircle, BookOpen, Video, Bot, Zap } from 'lucide-react';
+import { Play, Clock, Users, Award, CheckCircle, BookOpen, Video, Bot, Zap, Sparkles, Heart, Leaf, Target, Network, Gift } from 'lucide-react';
 
 const Journey = () => {
-  const [selectedModule, setSelectedModule] = useState<number | null>(null);
+  const [selectedBlock, setSelectedBlock] = useState<number | null>(null);
 
-  const modules = [
+  const blocks = [
     {
       id: 1,
-      title: "O que é Web3 e por que ele importa",
-      duration: 45,
-      format: "Texto + Vídeo curto (5-8 min)",
-      description: "Compreenda as diferenças práticas entre Web2 e Web3, descentralização no cotidiano e soberania digital",
-      topics: [
-        "Web2 vs Web3: diferenças práticas",
-        "Descentralização na vida cotidiana", 
-        "Soberania digital e autonomia",
-        "Casos de uso reais no Brasil"
+      title: "Protagonismo Regenerativo no Aprendizado Descentralizado",
+      subtitle: "Entrada na trilha com consciência regenerativa",
+      description: "Criar uma jornada de aprendizagem viva e descentralizada",
+      actions: [
+        "Compreender princípios da trilha",
+        "Definir intenções pessoais",
+        "Conectar-se com a rede",
+        "Estabelecer ritmo próprio"
       ],
-      activity: "Quiz interativo via bot Telegram",
-      result: "Compreensão básica do ecossistema Web3",
+      symbol: "Entrada consciente na trilha",
       color: "from-neon-blue to-blue-600",
-      icon: <BookOpen className="w-6 h-6" />
+      icon: <Target className="w-6 h-6" />,
+      fluxSeed: null
     },
     {
       id: 2,
-      title: "Wallets, identidade digital e segurança",
-      duration: 60,
-      format: "Texto + Vídeo prático (10-12 min)",
-      description: "Crie sua primeira carteira digital e aprenda práticas essenciais de segurança",
-      topics: [
-        "O que é uma carteira digital",
-        "Criação de wallet na testnet TON",
-        "Chaves públicas e privadas (linguagem simples)",
-        "Práticas de segurança essenciais"
+      title: "Iniciação Simbólica: Identidade e Wallet",
+      subtitle: "FluxSeed #001 - NFT de identidade Web3",
+      description: "Dar início à jornada prática com consciência e leveza",
+      actions: [
+        "Criar ou recuperar uma Wallet (TON recomendada)",
+        "Registrar o nome simbólico",
+        "Receber o NFT de Iniciação (FluxSeed #001)",
+        "Anotar primeira intenção no Passaporte Web3",
+        "Responder: 'O que me trouxe até aqui?'"
       ],
-      activity: "Criar primeira carteira didática",
-      result: "Wallet funcional + conhecimento de segurança",
+      symbol: "FluxSeed #001",
       color: "from-neon-green to-green-600",
-      icon: <Zap className="w-6 h-6" />
+      icon: <Zap className="w-6 h-6" />,
+      fluxSeed: "001",
+      ritual: "Ativação da wallet como ritual simbólico"
     },
     {
       id: 3,
-      title: "Blockchain, tokens e rastreabilidade",
-      duration: 50,
-      format: "Texto + Vídeo explicativo (8-10 min)",
-      description: "Entenda como funciona uma blockchain através de analogias simples e casos práticos",
-      topics: [
-        "Como funciona uma blockchain (analogias simples)",
-        "Tokens: utilidade vs especulação",
-        "Rastreabilidade e transparência",
-        "Casos práticos: agricultura, arte, educação"
+      title: "Círculo de Exploração: Fundamentos da Web3",
+      subtitle: "FluxSeed #002 - NFT de exploração",
+      description: "Explorar conceitos fundamentais com linguagem própria",
+      actions: [
+        "Compreender blockchain com analogias",
+        "Explorar descentralização no cotidiano",
+        "Descobrir soberania digital",
+        "Conectar teoria com prática local"
       ],
-      activity: "Rastrear transação real via bot POE",
-      result: "Compreensão de transparência blockchain",
+      symbol: "FluxSeed #002",
       color: "from-neon-purple to-purple-600",
-      icon: <Users className="w-6 h-6" />
+      icon: <BookOpen className="w-6 h-6" />,
+      fluxSeed: "002"
     },
     {
       id: 4,
-      title: "NFTs com utilidade real",
-      duration: 55,
-      format: "Texto + Vídeo tutorial (12-15 min)",
-      description: "Descubra os NFTs além do hype: certificados, identidade e acesso com utilidade real",
-      topics: [
-        "NFTs além do hype: certificados, identidade, acesso",
-        "Criação de NFT simples via gotas.social",
-        "Armazenamento descentralizado (NFT.storage)",
-        "Casos de uso: certificados, arte comunitária, eventos"
+      title: "Ferramentas do Presente: Wallets, dApps e Exploradores",
+      subtitle: "FluxSeed #003 - NFT de prática",
+      description: "Experiência prática com ferramentas reais e públicas",
+      actions: [
+        "Usar dApps na prática",
+        "Explorar blockchains reais",
+        "Interagir com contratos inteligentes",
+        "Navegar por exploradores de blockchain"
       ],
-      activity: "Criar primeiro NFT com utilidade",
-      result: "NFT próprio + compreensão de utilidade",
+      symbol: "FluxSeed #003",
       color: "from-yellow-400 to-orange-500",
-      icon: <Award className="w-6 h-6" />
+      icon: <Bot className="w-6 h-6" />,
+      fluxSeed: "003"
     },
     {
       id: 5,
-      title: "Participação em DAOs",
-      duration: 65,
-      format: "Texto + Vídeo participativo (15-18 min)",
-      description: "Experimente a governança descentralizada participando de decisões coletivas",
-      topics: [
-        "O que são DAOs e governança descentralizada",
-        "Participação em decisões coletivas",
-        "Ferramentas de votação e propostas",
-        "Casos reais: cooperativas, coletivos, ONGs"
+      title: "Redes e Comunidades Web3: Participação Viva",
+      subtitle: "FluxSeed #004 - NFT de comunidade",
+      description: "Conectar-se com redes descentralizadas vivas",
+      actions: [
+        "Participar de DAOs reais",
+        "Contribuir em projetos colaborativos",
+        "Criar conexões autênticas",
+        "Praticar governança descentralizada"
       ],
-      activity: "Participar de votação em DAO de teste",
-      result: "Experiência prática em governança",
+      symbol: "FluxSeed #004",
       color: "from-red-400 to-pink-500",
-      icon: <Users className="w-6 h-6" />
+      icon: <Users className="w-6 h-6" />,
+      fluxSeed: "004"
     },
     {
       id: 6,
-      title: "Ferramentas livres e descentralizadas",
-      duration: 70,
-      format: "Texto + Vídeo hands-on (20-25 min)",
-      description: "Construa seu primeiro microprojeto usando ferramentas descentralizadas",
-      topics: [
-        "Alternativas descentralizadas para redes sociais",
-        "Armazenamento e comunicação segura",
-        "Ferramentas para criadores e educadores",
-        "Construindo projetos regenerativos"
+      title: "Construindo em Rede: Contribuições Reais",
+      subtitle: "FluxSeed #005 - NFT de contribuição",
+      description: "Cocriação e devolutiva simbólica",
+      actions: [
+        "Criar projeto próprio",
+        "Contribuir com a rede CalangoFlux",
+        "Mentorear outros participantes",
+        "Documentar aprendizados"
       ],
-      activity: "Criar microprojeto usando ferramentas aprendidas",
-      result: "Projeto próprio funcional",
+      symbol: "FluxSeed #005",
       color: "from-cyan-400 to-blue-500",
-      icon: <Bot className="w-6 h-6" />
+      icon: <Network className="w-6 h-6" />,
+      fluxSeed: "005"
+    },
+    {
+      id: 7,
+      title: "Ciclo de Retorno e Celebração Regenerativa",
+      subtitle: "FluxSeed #006 - NFT de celebração",
+      description: "Celebração e ramificação em novos ciclos",
+      actions: [
+        "Refletir sobre a jornada completa",
+        "Facilitar novos ciclos para outros",
+        "Celebrar conquistas simbólicas",
+        "Ramificar em territórios vivos"
+      ],
+      symbol: "FluxSeed #006",
+      color: "from-emerald-400 to-teal-500",
+      icon: <Gift className="w-6 h-6" />,
+      fluxSeed: "006"
     }
   ];
 
-  const totalDuration = modules.reduce((sum, module) => sum + module.duration, 0);
+  const principles = [
+    {
+      title: "Autonomia não solitária",
+      description: "Cada pessoa é parte ativa e responsável",
+      icon: "🌱"
+    },
+    {
+      title: "Aprender fazendo",
+      description: "Com sentido real e prático",
+      icon: "🛠️"
+    },
+    {
+      title: "Registro sem vigilância",
+      description: "Progresso autogerido",
+      icon: "📝"
+    },
+    {
+      title: "Não competição",
+      description: "Gamificação simbólica, não opressora",
+      icon: "🤝"
+    },
+    {
+      title: "Cocriação contínua",
+      description: "Todo conteúdo pode ser remixado",
+      icon: "🔄"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold gradient-text mb-6">
-            Curso Introdutório Web3
-          </h1>
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="w-12 h-12 bg-gradient-to-br from-neon-blue to-neon-purple rounded-xl flex items-center justify-center">
+              <Leaf className="w-6 h-6 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold gradient-text">
+              Trilha CalangoFlux
+            </h1>
+          </div>
           <p className="text-xl text-gray-300 mb-4 max-w-4xl mx-auto">
-            Letramento digital popular para territórios vivos
+            Letramento Web3 regenerativo • Ciclo 01
           </p>
-          <div className="glass rounded-2xl p-6 max-w-2xl mx-auto">
+          <div className="glass rounded-2xl p-6 max-w-3xl mx-auto">
+            <p className="text-gray-300 text-lg mb-4">
+              "A trilha não é sobre Web3. É sobre se tornar um nó vivo em uma nova rede de aprendizagem."
+            </p>
             <div className="flex items-center justify-center gap-8 text-sm">
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-neon-blue" />
-                <span className="text-gray-300">{Math.floor(totalDuration / 60)}h {totalDuration % 60}min total</span>
+                <Sparkles className="w-4 h-4 text-neon-blue" />
+                <span className="text-gray-300">7 blocos orgânicos</span>
               </div>
               <div className="flex items-center gap-2">
-                <BookOpen className="w-4 h-4 text-neon-green" />
-                <span className="text-gray-300">6 módulos</span>
+                <Heart className="w-4 h-4 text-neon-green" />
+                <span className="text-gray-300">Ritmo próprio</span>
               </div>
               <div className="flex items-center gap-2">
                 <Award className="w-4 h-4 text-neon-purple" />
-                <span className="text-gray-300">Certificação NFT</span>
+                <span className="text-gray-300">FluxSeeds simbólicos</span>
               </div>
             </div>
           </div>
@@ -142,100 +188,131 @@ const Journey = () => {
 
         {/* Principles */}
         <div className="glass rounded-2xl p-8 mb-12">
-          <h2 className="text-2xl font-bold text-center mb-6 gradient-text">
-            "Letramento Web3 popular é nossa semente de liberdade digital"
+          <h2 className="text-2xl font-bold text-center mb-8 gradient-text">
+            🌱 Princípios da Trilha
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-br from-neon-blue to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <span className="text-white font-bold">🆓</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {principles.map((principle, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">{principle.icon}</span>
+                </div>
+                <h3 className="font-semibold text-white mb-2">{principle.title}</h3>
+                <p className="text-gray-400 text-sm">{principle.description}</p>
               </div>
-              <h3 className="font-semibold text-white mb-2">Sempre Gratuito</h3>
-              <p className="text-gray-400 text-sm">Curso gratuito e sempre será</p>
+            ))}
+          </div>
+        </div>
+
+        {/* Flow */}
+        <div className="glass rounded-2xl p-8 mb-12">
+          <h2 className="text-2xl font-bold text-center mb-6 gradient-text">
+            🌀 Fluxo Proposto (não obrigatório)
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="flex items-center gap-3 p-4 glass-dark rounded-xl">
+              <div className="w-8 h-8 bg-gradient-to-br from-neon-blue to-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">1</div>
+              <span className="text-gray-300 text-sm">Iniciação simbólica com identidade digital</span>
             </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-br from-neon-green to-green-600 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <span className="text-white font-bold">🔄</span>
-              </div>
-              <h3 className="font-semibold text-white mb-2">Replicável</h3>
-              <p className="text-gray-400 text-sm">Por qualquer comunidade</p>
+            <div className="flex items-center gap-3 p-4 glass-dark rounded-xl">
+              <div className="w-8 h-8 bg-gradient-to-br from-neon-green to-green-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">2</div>
+              <span className="text-gray-300 text-sm">Exploração dos fundamentos em linguagem própria</span>
             </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-br from-neon-purple to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <span className="text-white font-bold">🚫</span>
-              </div>
-              <h3 className="font-semibold text-white mb-2">Sem Barreiras</h3>
-              <p className="text-gray-400 text-sm">Nenhum pré-requisito técnico</p>
+            <div className="flex items-center gap-3 p-4 glass-dark rounded-xl">
+              <div className="w-8 h-8 bg-gradient-to-br from-neon-purple to-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">3</div>
+              <span className="text-gray-300 text-sm">Experiência com ferramentas reais e públicas</span>
+            </div>
+            <div className="flex items-center gap-3 p-4 glass-dark rounded-xl">
+              <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-sm">4</div>
+              <span className="text-gray-300 text-sm">Conexão com redes descentralizadas vivas</span>
+            </div>
+            <div className="flex items-center gap-3 p-4 glass-dark rounded-xl">
+              <div className="w-8 h-8 bg-gradient-to-br from-red-400 to-pink-500 rounded-lg flex items-center justify-center text-white font-bold text-sm">5</div>
+              <span className="text-gray-300 text-sm">Cocriação e devolutiva simbólica</span>
+            </div>
+            <div className="flex items-center gap-3 p-4 glass-dark rounded-xl">
+              <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-sm">6</div>
+              <span className="text-gray-300 text-sm">Celebração e ramificação em novos ciclos</span>
             </div>
           </div>
         </div>
 
-        {/* Modules Grid */}
+        {/* Blocks Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {modules.map((module) => (
+          {blocks.map((block) => (
             <div 
-              key={module.id}
+              key={block.id}
               className={`glass rounded-2xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer ${
-                selectedModule === module.id ? 'ring-2 ring-neon-blue' : ''
+                selectedBlock === block.id ? 'ring-2 ring-neon-blue' : ''
               }`}
-              onClick={() => setSelectedModule(selectedModule === module.id ? null : module.id)}
+              onClick={() => setSelectedBlock(selectedBlock === block.id ? null : block.id)}
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className={`w-12 h-12 bg-gradient-to-br ${module.color} rounded-xl flex items-center justify-center`}>
-                  {module.icon}
+                <div className={`w-12 h-12 bg-gradient-to-br ${block.color} rounded-xl flex items-center justify-center`}>
+                  {block.icon}
                 </div>
                 <div>
-                  <h3 className="font-semibold text-white text-lg">Módulo {module.id}</h3>
-                  <div className="flex items-center gap-2 text-gray-400 text-sm">
-                    <Clock className="w-3 h-3" />
-                    <span>{module.duration}min</span>
-                  </div>
+                  <h3 className="font-semibold text-white text-lg">Bloco {block.id}</h3>
+                  {block.fluxSeed && (
+                    <div className="flex items-center gap-2 text-gray-400 text-xs">
+                      <Award className="w-3 h-3" />
+                      <span>FluxSeed #{block.fluxSeed}</span>
+                    </div>
+                  )}
                 </div>
               </div>
               
-              <h4 className="font-bold text-white mb-2">{module.title}</h4>
-              <p className="text-gray-400 text-sm mb-4">{module.description}</p>
+              <h4 className="font-bold text-white mb-2">{block.title}</h4>
+              <p className="text-gray-400 text-sm mb-4">{block.description}</p>
               
-              <div className="flex items-center gap-2 text-xs text-gray-500 mb-3">
-                <Video className="w-3 h-3" />
-                <span>{module.format}</span>
-              </div>
+              {block.fluxSeed && (
+                <div className="flex items-center gap-2 text-xs text-neon-blue mb-3">
+                  <Sparkles className="w-3 h-3" />
+                  <span>{block.subtitle}</span>
+                </div>
+              )}
               
               <div className="flex items-center justify-between">
-                <span className="text-neon-blue text-sm font-medium">Ver detalhes</span>
+                <span className="text-neon-blue text-sm font-medium">Ver ações</span>
                 <Play className="w-4 h-4 text-neon-blue" />
               </div>
             </div>
           ))}
         </div>
 
-        {/* Module Details */}
-        {selectedModule && (
+        {/* Block Details */}
+        {selectedBlock && (
           <div className="glass rounded-2xl p-8 mb-12">
             {(() => {
-              const module = modules.find(m => m.id === selectedModule);
-              if (!module) return null;
+              const block = blocks.find(b => b.id === selectedBlock);
+              if (!block) return null;
               
               return (
                 <div>
                   <div className="flex items-center gap-4 mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${module.color} rounded-xl flex items-center justify-center`}>
-                      {module.icon}
+                    <div className={`w-16 h-16 bg-gradient-to-br ${block.color} rounded-xl flex items-center justify-center`}>
+                      {block.icon}
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-white">Módulo {module.id}</h3>
-                      <h4 className="text-xl text-gray-300">{module.title}</h4>
+                      <h3 className="text-2xl font-bold text-white">Bloco {block.id}</h3>
+                      <h4 className="text-xl text-gray-300">{block.title}</h4>
+                      {block.fluxSeed && (
+                        <div className="flex items-center gap-2 mt-2">
+                          <Award className="w-4 h-4 text-neon-blue" />
+                          <span className="text-neon-blue text-sm font-medium">FluxSeed #{block.fluxSeed}</span>
+                        </div>
+                      )}
                     </div>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                      <h5 className="font-semibold text-white mb-3">📚 Conteúdo:</h5>
+                      <h5 className="font-semibold text-white mb-3">🌱 Ações do Bloco:</h5>
                       <ul className="space-y-2">
-                        {module.topics.map((topic, index) => (
+                        {block.actions.map((action, index) => (
                           <li key={index} className="flex items-start gap-2 text-gray-300">
                             <CheckCircle className="w-4 h-4 text-neon-green mt-0.5 flex-shrink-0" />
-                            <span className="text-sm">{topic}</span>
+                            <span className="text-sm">{action}</span>
                           </li>
                         ))}
                       </ul>
@@ -243,26 +320,28 @@ const Journey = () => {
                     
                     <div className="space-y-4">
                       <div>
-                        <h5 className="font-semibold text-white mb-2">🎯 Atividade Prática:</h5>
-                        <p className="text-gray-300 text-sm">{module.activity}</p>
+                        <h5 className="font-semibold text-white mb-2">🎯 Intenção:</h5>
+                        <p className="text-gray-300 text-sm">{block.description}</p>
                       </div>
                       
                       <div>
-                        <h5 className="font-semibold text-white mb-2">🏆 Resultado:</h5>
-                        <p className="text-gray-300 text-sm">{module.result}</p>
+                        <h5 className="font-semibold text-white mb-2">🏆 Símbolo:</h5>
+                        <p className="text-gray-300 text-sm">{block.symbol}</p>
                       </div>
                       
-                      <div>
-                        <h5 className="font-semibold text-white mb-2">📱 Formato:</h5>
-                        <p className="text-gray-300 text-sm">{module.format}</p>
-                      </div>
+                      {block.ritual && (
+                        <div>
+                          <h5 className="font-semibold text-white mb-2">🧙 Ritual:</h5>
+                          <p className="text-gray-300 text-sm">{block.ritual}</p>
+                        </div>
+                      )}
                     </div>
                   </div>
                   
                   <div className="mt-6 pt-6 border-t border-white/10">
                     <button className="btn-primary w-full md:w-auto">
                       <Play className="w-4 h-4 mr-2" />
-                      Começar Módulo {module.id}
+                      Iniciar Bloco {block.id}
                     </button>
                   </div>
                 </div>
@@ -271,83 +350,112 @@ const Journey = () => {
           </div>
         )}
 
-        {/* Resources */}
+        {/* Components */}
         <div className="glass rounded-2xl p-8 mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6 text-center">🛠️ Recursos Educacionais</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-2xl font-bold text-white mb-6 text-center">🧩 Componentes Ativos</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-neon-blue to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <BookOpen className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-semibold text-white mb-2">Manual de Sobrevivência</h3>
-              <p className="text-gray-400 text-sm">PDF gratuito com guia completo</p>
+              <h3 className="font-semibold text-white mb-2">HackMD</h3>
+              <p className="text-gray-400 text-sm">Registro público de aprendizados</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-neon-green to-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Bot className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-semibold text-white mb-2">CalangoNauta</h3>
-              <p className="text-gray-400 text-sm">Bot educativo 24h no Telegram</p>
+              <h3 className="font-semibold text-white mb-2">Bot CalangoNauta</h3>
+              <p className="text-gray-400 text-sm">Guia da jornada e checkpoint</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-neon-purple to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-white" />
+                <Zap className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-semibold text-white mb-2">Dashboard Exclusivo</h3>
-              <p className="text-gray-400 text-sm">Painel de progresso personalizado</p>
+              <h3 className="font-semibold text-white mb-2">Wallet TON</h3>
+              <p className="text-gray-400 text-sm">Identidade simbólica + NFTs</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
+                <Target className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-semibold text-white mb-2">Comunidade Discord</h3>
-              <p className="text-gray-400 text-sm">Canal de dúvidas e networking</p>
+              <h3 className="font-semibold text-white mb-2">Painel de Jornada</h3>
+              <p className="text-gray-400 text-sm">Rastreia avanços com autonomia</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-red-400 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-semibold text-white mb-2">NFT de Bloco</h3>
+              <p className="text-gray-400 text-sm">Simboliza participação</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <BookOpen className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-semibold text-white mb-2">Passaporte Web3</h3>
+              <p className="text-gray-400 text-sm">Documento pessoal de trilha</p>
             </div>
           </div>
         </div>
 
-        {/* Target Audience */}
-        <div className="glass rounded-2xl p-8">
-          <h2 className="text-2xl font-bold text-white mb-6 text-center">👥 Para Quem é Este Curso?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Tokenization */}
+        <div className="glass rounded-2xl p-8 mb-12">
+          <h2 className="text-2xl font-bold text-white mb-6 text-center">🪙 Tokenização Ética</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
-              <h3 className="font-semibold text-white mb-2">🎓 Educadores</h3>
-              <p className="text-gray-400 text-sm">Multiplicadores e formadores</p>
+              <div className="w-12 h-12 bg-gradient-to-br from-neon-blue to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <span className="text-white font-bold">🌱</span>
+              </div>
+              <h3 className="font-semibold text-white mb-2">Tokens Simbólicos</h3>
+              <p className="text-gray-400 text-sm">Sem valor financeiro, apenas simbólico</p>
             </div>
             <div className="text-center">
-              <h3 className="font-semibold text-white mb-2">🏘️ Iniciativas Comunitárias</h3>
-              <p className="text-gray-400 text-sm">Coletivos e movimentos sociais</p>
+              <div className="w-12 h-12 bg-gradient-to-br from-neon-green to-green-600 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <span className="text-white font-bold">🎯</span>
+              </div>
+              <h3 className="font-semibold text-white mb-2">FluxSeeds</h3>
+              <p className="text-gray-400 text-sm">1 token por bloco completado</p>
             </div>
             <div className="text-center">
-              <h3 className="font-semibold text-white mb-2">🌱 ONGs</h3>
-              <p className="text-gray-400 text-sm">Redes de cultura viva</p>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold text-white mb-2">🧑‍💼 Jovens</h3>
-              <p className="text-gray-400 text-sm">Sem acesso a formação técnica</p>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold text-white mb-2">💼 Autônomos</h3>
-              <p className="text-gray-400 text-sm">Profissionais liberais</p>
-            </div>
-            <div className="text-center">
-              <h3 className="font-semibold text-white mb-2">🤔 Curiosos</h3>
-              <p className="text-gray-400 text-sm">Interessados em tecnologia</p>
+              <div className="w-12 h-12 bg-gradient-to-br from-neon-purple to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <span className="text-white font-bold">🔄</span>
+              </div>
+              <h3 className="font-semibold text-white mb-2">Acesso a Labs</h3>
+              <p className="text-gray-400 text-sm">Mentorias e DAO simulada</p>
             </div>
           </div>
+        </div>
+
+        {/* CTA */}
+        <div className="glass rounded-2xl p-8 text-center">
+          <h2 className="text-2xl font-bold text-white mb-4">
+            🌱 Pronto para se tornar um nó vivo?
+          </h2>
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            A trilha é aberta, orgânica e adaptável. Pode ser utilizada para autoformação, 
+            vivência em grupo, mentoria ou ciclo educativo.
+          </p>
           
-          <div className="mt-8 pt-6 border-t border-white/10 text-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="btn-primary text-lg px-8 py-4">
               <Play className="w-5 h-5 mr-2" />
-              Começar Jornada Agora
+              Iniciar Bloco 01
             </button>
-            <p className="text-gray-400 text-sm mt-4">
-              ✅ Nenhum conhecimento técnico necessário • ✅ Acesso básico à internet • ✅ Disposição para aprender
-            </p>
+            <button className="btn-secondary text-lg px-8 py-4">
+              <BookOpen className="w-5 h-5 mr-2" />
+              Ver Passaporte Web3
+            </button>
           </div>
+          
+          <p className="text-gray-400 text-sm mt-6">
+            ✅ Autonomia não solitária • ✅ Ritmo próprio • ✅ Registro sem vigilância • ✅ Cocriação contínua
+          </p>
         </div>
       </div>
     </div>
