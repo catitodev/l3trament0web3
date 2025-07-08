@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -6,8 +7,9 @@ import Automacoes from './pages/Automacoes';
 import Agentics from './pages/Agentics';
 import Webdesign from './pages/Webdesign';
 import DaosWeb3 from './pages/LetramentoWeb3';
+import GamificationDemo from './components/gamification/GamificationDemo';
 
-function App() {
+const App: React.FC = () => {
   return (
     <Router>
       <Routes>
@@ -19,9 +21,12 @@ function App() {
           <Route path="webdesign" element={<Webdesign />} />
           <Route path="daos-web3" element={<DaosWeb3 />} />
         </Route>
+        
+        {/* Rota temporária para testar gamificação */}
+        <Route path="/gamification-demo" element={<GamificationDemo />} />
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;
