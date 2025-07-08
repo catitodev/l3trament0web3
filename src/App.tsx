@@ -2,11 +2,14 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
-import AgentesAI from './pages/AgentesAI';
-import Automacoes from './pages/Automacoes';
-import Agentics from './pages/Agentics';
-import Webdesign from './pages/Webdesign';
-import DaosWeb3 from './pages/LetramentoWeb3';
+import DigitalLiteracy from './pages/DigitalLiteracy';
+import PublicGoods from './pages/PublicGoods';
+import CommonsLife from './pages/CommonsLife';
+import AbundantRelationships from './pages/AbundantRelationships';
+import ReFi from './pages/ReFi';
+import Journey from './pages/Journey';
+import Community from './pages/Community';
+import Impact from './pages/Impact';
 import GamificationDemo from './components/gamification/GamificationDemo';
 
 const App: React.FC = () => {
@@ -15,14 +18,17 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="agentes-ai" element={<AgentesAI />} />
-          <Route path="automacoes" element={<Automacoes />} />
-          <Route path="agentics" element={<Agentics />} />
-          <Route path="webdesign" element={<Webdesign />} />
-          <Route path="daos-web3" element={<DaosWeb3 />} />
+          <Route path="digital-literacy" element={<DigitalLiteracy />} />
+          <Route path="public-goods" element={<PublicGoods />} />
+          <Route path="commons-life" element={<CommonsLife />} />
+          <Route path="abundant-relationships" element={<AbundantRelationships />} />
+          <Route path="refi" element={<ReFi />} />
+          <Route path="journey" element={<Journey />} />
+          <Route path="community" element={<Community />} />
+          <Route path="impact" element={<Impact />} />
         </Route>
         
-        {/* Rota temporária para testar gamificação */}
+        {/* Rota para gamificação */}
         <Route path="/gamification-demo" element={<GamificationDemo />} />
       </Routes>
     </Router>
