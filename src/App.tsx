@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { WalletProvider } from './components/wallet/WalletProvider';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import DigitalLiteracy from './pages/DigitalLiteracy';
@@ -14,24 +15,26 @@ import GamificationDemo from './components/gamification/GamificationDemo';
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="digital-literacy" element={<DigitalLiteracy />} />
-          <Route path="public-goods" element={<PublicGoods />} />
-          <Route path="commons-life" element={<CommonsLife />} />
-          <Route path="abundant-relationships" element={<AbundantRelationships />} />
-          <Route path="refi" element={<ReFi />} />
-          <Route path="journey" element={<Journey />} />
-          <Route path="community" element={<Community />} />
-          <Route path="impact" element={<Impact />} />
-        </Route>
-        
-        {/* Rota para gamificação */}
-        <Route path="/gamification-demo" element={<GamificationDemo />} />
-      </Routes>
-    </Router>
+    <WalletProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="digital-literacy" element={<DigitalLiteracy />} />
+            <Route path="public-goods" element={<PublicGoods />} />
+            <Route path="commons-life" element={<CommonsLife />} />
+            <Route path="abundant-relationships" element={<AbundantRelationships />} />
+            <Route path="refi" element={<ReFi />} />
+            <Route path="journey" element={<Journey />} />
+            <Route path="community" element={<Community />} />
+            <Route path="impact" element={<Impact />} />
+          </Route>
+          
+          {/* Rota para gamificação */}
+          <Route path="/gamification-demo" element={<GamificationDemo />} />
+        </Routes>
+      </Router>
+    </WalletProvider>
   );
 };
 
