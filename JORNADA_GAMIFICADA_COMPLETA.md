@@ -188,7 +188,7 @@ Criar uma jornada de aprendizagem viva, descentralizada e registrada, que incent
 > **"A trilha não é sobre Web3. É sobre se tornar um nó vivo em uma nova rede de aprendizagem."**
 
 ### **Valores**
-- � **Trilha gratuita** e sempre será
+- 🌱 **Trilha gratuita** e sempre será
 - 🔄 **Conteúdo remixável** e adaptável
 - 🚫 **Sem barreiras** de entrada
 - 🌍 **Metodologia aberta** e colaborativa
@@ -217,19 +217,21 @@ Criar uma jornada de aprendizagem viva, descentralizada e registrada, que incent
 
 ---
 
-## 📋 **DETALHAMENTO: BLOCO 02 - INICIAÇÃO SIMBÓLICA**
+## 📋 **DETALHAMENTO COMPLETO DOS BLOCOS**
 
-### **🎯 Intenção**
+### **🌀 BLOCO 02 - INICIAÇÃO SIMBÓLICA: IDENTIDADE E WALLET**
+
+#### **🎯 Intenção**
 Dar início à jornada prática com consciência e leveza, reconhecendo a criação da própria identidade Web3 como um ato de autonomia simbólica e não técnica.
 
-### **🌱 Ações do Bloco**
+#### **🌱 Ações do Bloco**
 1. **Criar ou recuperar** uma Wallet (TON recomendada)
 2. **Registrar o nome simbólico** (pode usar ENS ou apenas anotar)
 3. **Receber o NFT de Iniciação** (FluxSeed #001)
 4. **Anotar sua primeira intenção** na trilha no **Passaporte Web3**
 5. **Responder**: "O que me trouxe até aqui?"
 
-### **🛠️ Ferramentas**
+#### **🛠️ Ferramentas**
 | Ferramenta       | Função                                    |
 |------------------|--------------------------------------------|
 | Wallet (TON)     | Armazena identidade e NFTs simbólicos      |
@@ -237,25 +239,245 @@ Dar início à jornada prática com consciência e leveza, reconhecendo a criaç
 | Bot IA           | Envia NFT simbólico + ativa próxima etapa  |
 | HackMD           | Mostra este documento de instrução         |
 
-### **🧭 Cuidados**
+#### **🧭 Cuidados**
 - Nunca compartilhe suas **chaves privadas**
 - O NFT recebido é **apenas simbólico**, sem valor comercial
 - A wallet pode ser usada em testnet ou apenas como registro
 
-### **🧙 Ato de Iniciação**
+#### **🧙 Ato de Iniciação**
 A ativação da wallet é considerada **um ritual simbólico** que marca o início da jornada Web3. A pergunta "quem sou eu neste novo ciclo?" abre a trilha.
 
 > Recomenda-se desenhar, escrever ou registrar de forma pessoal este momento.
 
-### **📜 Registro do Bloco**
+#### **📜 Registro do Bloco**
 - Nome simbólico (pode ser codinome, elemento, palavra viva)
 - ID pública da wallet (opcional)
 - Intenção registrada no HackMD ou Passaporte Notion
 - NFT simbólico recebido
 
-### **🔁 Acesso ao próximo bloco**
+#### **🔁 Acesso ao próximo bloco**
 - Após registrar seu NFT e intenção, o agente IA libera o Bloco 03
 - O acesso pode ser feito por link, bot ou painel interativo
 
 > **"Identidade Web3 é expressão do cuidado com o que somos ao criar."**  
 > **"Este é o primeiro passo para se tornar nodo ativo de uma rede viva."**
+
+---
+
+### **🌀 BLOCO 03 - CÍRCULO DE EXPLORAÇÃO: FUNDAMENTOS DA WEB3**
+
+#### **🎯 Intenção**
+Permitir que cada participante descubra os fundamentos da Web3 a partir de sua própria linguagem, contexto e curiosidade – nunca de forma imposta ou padronizada.
+
+#### **🌱 Fundamentos Abordados**
+- **O que é Web3?**
+- **Qual a diferença entre Web2 e Web3?**
+- **Blockchain**: o que é, por que surgiu, para quem serve?
+- **Tokens, NFTs, DAOs, dApps**: pra que tudo isso?
+- **A importância** de uma internet mais livre
+
+#### **🧩 Atividades Sugeridas**
+| Ação                        | Forma                                     |
+|-----------------------------|-------------------------------------------|
+| Assistir vídeo ou leitura  | Fontes públicas (Greenpill, Gitcoin, etc.)|
+| Responder ao Agente IA     | Chat interativo com perguntas guiadas     |
+| Fazer mapa mental          | Analógico ou digital                      |
+| Compartilhar dúvida ou insight | Em grupo de Telegram/Discord          |
+| Criar analogia própria     | Desenho, fala, escrita, poema...          |
+
+#### **🧠 Registro no Passaporte Web3**
+- Qual conceito Web3 mais te instiga?
+- Que dúvida ou desconforto surgiu?
+- O que te parece possível construir com isso?
+
+#### **🛠️ Ferramentas**
+- Vídeos públicos (sem login obrigatório)
+- Bot IA com resumos e links seguros
+- Painel Notion com material aberto e remixável
+- HackMD com versões públicas e replicáveis
+
+#### **🪙 Recompensa Simbólica**
+- **NFT FluxSeed #002**: "Curioso Viajante"
+- Token simbólico liberado após compartilhar reflexão
+- Acesso ao bloco 04: "Ferramentas do Presente"
+
+#### **🌍 Ética e Cuidado**
+- Nenhum conceito é obrigatório
+- Todas as dúvidas são bem-vindas
+- Não há julgamento, apenas escuta
+
+> **"Explorar Web3 não é decorar termos. É se permitir reimaginar o mundo."**  
+> **"A curiosidade é a ferramenta mais poderosa da nova rede."**
+
+---
+
+### **🌀 BLOCO 04 - FERRAMENTAS DO PRESENTE: WALLETS, DAPPS E EXPLORADORES**
+
+#### **🎯 Intenção**
+Desmistificar o uso da Web3 como algo técnico ou difícil. Mostrar que as ferramentas estão à disposição, e que cada pessoa pode interagir com elas em seu próprio ritmo, de forma segura e simbólica.
+
+#### **🧩 Ferramentas Apresentadas**
+| Ferramenta          | Função simbólica e prática                      |
+|---------------------|--------------------------------------------------|
+| Wallet (TON / MetaMask) | Identidade, acesso e assinatura simbólica  |
+| dApp (Atlantis, Gotas, Snapshot) | Navegação e participação leve     |
+| Explorador (TONscan / Etherscan) | Visualização de registros públicos |
+| NFT.Storage / IPFS  | Armazenamento descentralizado                   |
+| ENS / TON DNS       | Nome simbólico na Web3                          |
+
+#### **🛠️ Ações do Bloco**
+1. **Navegar em um dApp** (simples, sem login ou risco)
+2. **Localizar sua wallet** num explorador blockchain
+3. **Criar ou clonar um NFT** simbólico via IPFS ou bot
+4. **Registrar a experiência** com prints, anotações ou relatos
+
+#### **🧠 Reflexões no Passaporte Web3**
+- O que me surpreendeu?
+- O que me pareceu mais útil?
+- Senti-me mais autônomo ou mais confuso? Por quê?
+
+#### **🪙 Recompensa Simbólica**
+- **NFT FluxSeed #003**: "Ferramenteir@"
+- Acesso a uma badge adicional de explorador
+- Liberação do Bloco 05: "Redes e Comunidades Web3"
+
+#### **🛑 Segurança Ética**
+- Todo conteúdo é em testnet ou simbólico
+- Nenhuma chave privada será pedida ou exposta
+- A experiência é vivencial e registrada por escolha pessoal
+
+#### **🌍 Compreensão Ativa**
+- A Web3 só faz sentido quando tocada
+- Cada ferramenta visitada deixa uma marca viva
+- A trilha mostra caminhos, mas não força trajetos
+
+> **"A ferramenta não é o fim. É um convite ao fluxo."**  
+> **"Neste bloco, quem mexe, entende."**
+
+---
+
+### **🌀 BLOCO 05 - REDES E COMUNIDADES WEB3: PARTICIPAÇÃO VIVA**
+
+#### **🎯 Intenção**
+Apresentar o ecossistema Web3 como uma rede real de comunidades e projetos, e não apenas um conjunto de tecnologias. Promover interações que nutrem pertencimento, afeto e ação com propósito.
+
+#### **🌱 Ações Sugeridas**
+1. **Entrar em ao menos 1 comunidade Web3** de interesse (via Telegram, Discord ou fórum)
+2. **Ler ou comentar** um post real de uma DAO
+3. **Conhecer e registrar** 3 iniciativas regenerativas ou públicas
+4. **Identificar valores** ou propostas que fazem sentido com seu caminho
+
+#### **🌐 Comunidades Sugeridas (não obrigatórias)**
+- **Greenpill Brasil**
+- **Giveth / Gitcoin**
+- **ReFi DAO**
+- **Lil Nouns / Nouns Brasil**
+- **Atlantis Protocol / Gotas.social**
+
+#### **🧠 Reflexões no Passaporte Web3**
+- Qual projeto mais ressoou contigo?
+- Como você foi recebido?
+- Que contribuição você gostaria de oferecer nesse tipo de rede?
+
+#### **🛠️ Ferramentas**
+| Ferramenta       | Função                                       |
+|------------------|-----------------------------------------------|
+| Discord / Telegram | Comunicação direta com comunidades Web3    |
+| Mirror.xyz / Farcaster / X | Publicações descentralizadas       |
+| Repositórios públicos | Acesso a documentos e propostas abertas |
+
+#### **🪙 Recompensa Simbólica**
+- **NFT FluxSeed #004**: "Tecedor de Redes"
+- Registro de qual DAO ou iniciativa foi visitada
+- Acesso ao Bloco 06: "Construindo em Rede: Contribuições Reais"
+
+#### **📎 Cuidados e Ética**
+- Toda participação é voluntária e simbólica
+- Nenhuma comunidade será usada como canal de venda
+- A proposta é aprender pelo vínculo, não pela performance
+
+> **"As redes Web3 não são lugares a serem dominados."**  
+> **"São comunidades a serem cultivadas."**
+
+---
+
+### **🌀 BLOCO 06 - CONSTRUINDO EM REDE: CONTRIBUIÇÕES REAIS**
+
+#### **🎯 Intenção**
+Inspirar cada participante a reconhecer seu valor e oferecer uma contribuição concreta à rede – seja técnica, criativa, afetiva ou estratégica.
+
+#### **🌱 Tipos de Contribuição Possíveis**
+| Tipo                | Exemplos simbólicos                            |
+|---------------------|-------------------------------------------------|
+| Técnica             | Corrigir link, traduzir termo, sugerir script  |
+| Criativa            | Criar arte, texto, NFT, vídeo                  |
+| Afetiva             | Acolher alguém novo, agradecer no chat         |
+| Estratégica         | Propor ideia de melhoria, apontar sinergias    |
+| Documental          | Escrever um relato ou feedback no HackMD       |
+
+#### **🛠️ Ferramentas de Apoio**
+- Canal da comunidade (Telegram, Discord ou grupo local)
+- HackMD coletivo (como mural de contribuições)
+- Bot IA que envia sugestões de onde contribuir
+- NFT simbólico via IPFS para quem conclui
+
+#### **🧠 Registro no Passaporte Web3**
+- Qual foi sua contribuição neste bloco?
+- Como se sentiu ao oferecer algo?
+- Que tipo de retorno ou impacto houve (mesmo que invisível)?
+
+#### **🪙 Recompensa Simbólica**
+- **NFT FluxSeed #005**: "Cocriador@"
+- Registro do tipo de contribuição no painel Notion (opcional)
+- Liberação do Bloco 07: "Ciclo de Retorno e Celebração"
+
+#### **✨ Ética e Combinados**
+- Toda contribuição é válida e reconhecida
+- A participação é simbólica, não obrigatória
+- Ninguém será ranqueado por "fazer mais"
+
+> **"Contribuir não é provar valor."**  
+> **"É se tornar parte da rede que queremos cultivar."**
+
+---
+
+### **🌀 BLOCO 07 - CICLO DE RETORNO E CELEBRAÇÃO REGENERATIVA**
+
+#### **🎯 Intenção**
+Encerrar o primeiro ciclo de aprendizagem de forma simbólica, leve e regenerativa. Celebrar não o conteúdo absorvido, mas os vínculos criados, os insights revelados e as sementes plantadas.
+
+#### **🌱 Ações deste Bloco**
+1. **Rever os registros** do Passaporte Web3
+2. **Compartilhar um relato** (público ou privado) sobre sua trilha
+3. **Participar de um círculo simbólico** de celebração (grupo ou bot)
+4. **Escolher entre**: seguir para novo ciclo ou pausar com fechamento
+
+#### **🪙 Elementos Simbólicos**
+| Elemento           | Descrição                                      |
+|--------------------|-----------------------------------------------|
+| NFT FluxSeed #006  | "Celebraçã@" – representa o ciclo concluído   |
+| Token Círculo Vivo | Libera acesso a mentorias ou Labs              |
+| Badge "Tecel@"     | Indica contribuição viva à rede                |
+
+#### **🛠️ Ferramentas de Apoio**
+- Bot de registro final (com link para mural de relatos)
+- HackMD coletivo com frases, artes e links dos participantes
+- Painel Notion com trajetos e próximas trilhas (ocultado se desejado)
+
+#### **🧠 Reflexões no Passaporte Web3**
+- O que você levou da trilha para sua vida real?
+- Que relação você passou a ter com a Web3?
+- Que convite você deixaria para quem virá depois?
+
+#### **🌀 Encaminhamentos Possíveis**
+- **Novo ciclo**: inicia trilha temática (Ecossistemas, DAOs, NFTs etc.)
+- **Ciclo de pausa**: encerra com documentação pessoal e NFT final
+- **Mentoria**: pode se tornar facilitador ou ponto de apoio local
+
+#### **✨ Ética de Encerramento**
+- Nenhuma trilha é final
+- A pausa é um direito, a continuidade é um convite
+- O valor está em cada vivência, não em um certificado
+
+> **"Celebrar é cuidar do tempo vivido."**  
+> **"A trilha não termina: ela se espirala."**

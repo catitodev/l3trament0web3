@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, Clock, Users, Award, CheckCircle, BookOpen, Video, Bot, Zap, Sparkles, Heart, Leaf, Target, Network, Gift } from 'lucide-react';
+import { Play, Clock, Users, Award, CheckCircle, BookOpen, Video, Bot, Zap, Sparkles, Heart, Leaf, Target, Network, Gift, Search, MessageCircle, Lightbulb, Wrench, Globe, Share2, Palette, Brain, Compass } from 'lucide-react';
 
 const Journey = () => {
   const [selectedBlock, setSelectedBlock] = useState<number | null>(null);
@@ -19,7 +19,10 @@ const Journey = () => {
       symbol: "Entrada consciente na trilha",
       color: "from-neon-blue to-blue-600",
       icon: <Target className="w-6 h-6" />,
-      fluxSeed: null
+      fluxSeed: null,
+      tools: [],
+      reflections: [],
+      ethics: []
     },
     {
       id: 2,
@@ -37,7 +40,24 @@ const Journey = () => {
       color: "from-neon-green to-green-600",
       icon: <Zap className="w-6 h-6" />,
       fluxSeed: "001",
-      ritual: "Ativação da wallet como ritual simbólico"
+      ritual: "Ativação da wallet como ritual simbólico",
+      tools: [
+        { name: "Wallet (TON)", function: "Armazena identidade e NFTs simbólicos" },
+        { name: "Formulário Notion", function: "Registro da intenção inicial" },
+        { name: "Bot IA", function: "Envia NFT simbólico + ativa próxima etapa" },
+        { name: "HackMD", function: "Mostra documento de instrução" }
+      ],
+      reflections: [
+        "Nome simbólico escolhido",
+        "ID pública da wallet (opcional)",
+        "Intenção registrada no Passaporte",
+        "NFT simbólico recebido"
+      ],
+      ethics: [
+        "Nunca compartilhe suas chaves privadas",
+        "O NFT recebido é apenas simbólico, sem valor comercial",
+        "A wallet pode ser usada em testnet ou apenas como registro"
+      ]
     },
     {
       id: 3,
@@ -45,15 +65,39 @@ const Journey = () => {
       subtitle: "FluxSeed #002 - NFT de exploração",
       description: "Explorar conceitos fundamentais com linguagem própria",
       actions: [
-        "Compreender blockchain com analogias",
-        "Explorar descentralização no cotidiano",
-        "Descobrir soberania digital",
-        "Conectar teoria com prática local"
+        "Assistir vídeo ou leitura de fontes públicas",
+        "Responder ao Agente IA com perguntas guiadas",
+        "Fazer mapa mental (analógico ou digital)",
+        "Compartilhar dúvida ou insight em grupo",
+        "Criar analogia própria (desenho, fala, escrita, poema)"
       ],
-      symbol: "FluxSeed #002",
+      symbol: "FluxSeed #002 - Curioso Viajante",
       color: "from-neon-purple to-purple-600",
-      icon: <BookOpen className="w-6 h-6" />,
-      fluxSeed: "002"
+      icon: <Search className="w-6 h-6" />,
+      fluxSeed: "002",
+      fundamentals: [
+        "O que é Web3?",
+        "Qual a diferença entre Web2 e Web3?",
+        "Blockchain: o que é, por que surgiu, para quem serve?",
+        "Tokens, NFTs, DAOs, dApps: pra que tudo isso?",
+        "A importância de uma internet mais livre"
+      ],
+      tools: [
+        { name: "Vídeos públicos", function: "Sem login obrigatório" },
+        { name: "Bot IA", function: "Resumos e links seguros" },
+        { name: "Painel Notion", function: "Material aberto e remixável" },
+        { name: "HackMD", function: "Versões públicas e replicáveis" }
+      ],
+      reflections: [
+        "Qual conceito Web3 mais te instiga?",
+        "Que dúvida ou desconforto surgiu?",
+        "O que te parece possível construir com isso?"
+      ],
+      ethics: [
+        "Nenhum conceito é obrigatório",
+        "Todas as dúvidas são bem-vindas",
+        "Não há julgamento, apenas escuta"
+      ]
     },
     {
       id: 4,
@@ -61,15 +105,32 @@ const Journey = () => {
       subtitle: "FluxSeed #003 - NFT de prática",
       description: "Experiência prática com ferramentas reais e públicas",
       actions: [
-        "Usar dApps na prática",
-        "Explorar blockchains reais",
-        "Interagir com contratos inteligentes",
-        "Navegar por exploradores de blockchain"
+        "Navegar em um dApp (simples, sem login ou risco)",
+        "Localizar sua wallet num explorador blockchain",
+        "Criar ou clonar um NFT simbólico via IPFS ou bot",
+        "Registrar a experiência com prints, anotações ou relatos"
       ],
-      symbol: "FluxSeed #003",
+      symbol: "FluxSeed #003 - Ferramenteir@",
       color: "from-yellow-400 to-orange-500",
-      icon: <Bot className="w-6 h-6" />,
-      fluxSeed: "003"
+      icon: <Wrench className="w-6 h-6" />,
+      fluxSeed: "003",
+      toolsPresented: [
+        { name: "Wallet (TON / MetaMask)", function: "Identidade, acesso e assinatura simbólica" },
+        { name: "dApp (Atlantis, Gotas, Snapshot)", function: "Navegação e participação leve" },
+        { name: "Explorador (TONscan / Etherscan)", function: "Visualização de registros públicos" },
+        { name: "NFT.Storage / IPFS", function: "Armazenamento descentralizado" },
+        { name: "ENS / TON DNS", function: "Nome simbólico na Web3" }
+      ],
+      reflections: [
+        "O que me surpreendeu?",
+        "O que me pareceu mais útil?",
+        "Senti-me mais autônomo ou mais confuso? Por quê?"
+      ],
+      ethics: [
+        "Todo conteúdo é em testnet ou simbólico",
+        "Nenhuma chave privada será pedida ou exposta",
+        "A experiência é vivencial e registrada por escolha pessoal"
+      ]
     },
     {
       id: 5,
@@ -77,15 +138,37 @@ const Journey = () => {
       subtitle: "FluxSeed #004 - NFT de comunidade",
       description: "Conectar-se com redes descentralizadas vivas",
       actions: [
-        "Participar de DAOs reais",
-        "Contribuir em projetos colaborativos",
-        "Criar conexões autênticas",
-        "Praticar governança descentralizada"
+        "Entrar em ao menos 1 comunidade Web3 de interesse",
+        "Ler ou comentar um post real de uma DAO",
+        "Conhecer e registrar 3 iniciativas regenerativas",
+        "Identificar valores que fazem sentido com seu caminho"
       ],
-      symbol: "FluxSeed #004",
+      symbol: "FluxSeed #004 - Tecedor de Redes",
       color: "from-red-400 to-pink-500",
       icon: <Users className="w-6 h-6" />,
-      fluxSeed: "004"
+      fluxSeed: "004",
+      communities: [
+        "Greenpill Brasil",
+        "Giveth / Gitcoin",
+        "ReFi DAO",
+        "Lil Nouns / Nouns Brasil",
+        "Atlantis Protocol / Gotas.social"
+      ],
+      tools: [
+        { name: "Discord / Telegram", function: "Comunicação direta com comunidades Web3" },
+        { name: "Mirror.xyz / Farcaster / X", function: "Publicações descentralizadas" },
+        { name: "Repositórios públicos", function: "Acesso a documentos e propostas abertas" }
+      ],
+      reflections: [
+        "Qual projeto mais ressoou contigo?",
+        "Como você foi recebido?",
+        "Que contribuição você gostaria de oferecer nesse tipo de rede?"
+      ],
+      ethics: [
+        "Toda participação é voluntária e simbólica",
+        "Nenhuma comunidade será usada como canal de venda",
+        "A proposta é aprender pelo vínculo, não pela performance"
+      ]
     },
     {
       id: 6,
@@ -93,15 +176,32 @@ const Journey = () => {
       subtitle: "FluxSeed #005 - NFT de contribuição",
       description: "Cocriação e devolutiva simbólica",
       actions: [
-        "Criar projeto próprio",
-        "Contribuir com a rede CalangoFlux",
-        "Mentorear outros participantes",
-        "Documentar aprendizados"
+        "Oferecer contribuição técnica, criativa, afetiva ou estratégica",
+        "Usar HackMD coletivo como mural de contribuições",
+        "Receber sugestões do Bot IA sobre onde contribuir",
+        "Registrar tipo de contribuição no Passaporte Web3"
       ],
-      symbol: "FluxSeed #005",
+      symbol: "FluxSeed #005 - Cocriador@",
       color: "from-cyan-400 to-blue-500",
-      icon: <Network className="w-6 h-6" />,
-      fluxSeed: "005"
+      icon: <Palette className="w-6 h-6" />,
+      fluxSeed: "005",
+      contributionTypes: [
+        { type: "Técnica", examples: "Corrigir link, traduzir termo, sugerir script" },
+        { type: "Criativa", examples: "Criar arte, texto, NFT, vídeo" },
+        { type: "Afetiva", examples: "Acolher alguém novo, agradecer no chat" },
+        { type: "Estratégica", examples: "Propor ideia de melhoria, apontar sinergias" },
+        { type: "Documental", examples: "Escrever um relato ou feedback no HackMD" }
+      ],
+      reflections: [
+        "Qual foi sua contribuição neste bloco?",
+        "Como se sentiu ao oferecer algo?",
+        "Que tipo de retorno ou impacto houve (mesmo que invisível)?"
+      ],
+      ethics: [
+        "Toda contribuição é válida e reconhecida",
+        "A participação é simbólica, não obrigatória",
+        "Ninguém será ranqueado por 'fazer mais'"
+      ]
     },
     {
       id: 7,
@@ -109,15 +209,35 @@ const Journey = () => {
       subtitle: "FluxSeed #006 - NFT de celebração",
       description: "Celebração e ramificação em novos ciclos",
       actions: [
-        "Refletir sobre a jornada completa",
-        "Facilitar novos ciclos para outros",
-        "Celebrar conquistas simbólicas",
-        "Ramificar em territórios vivos"
+        "Rever os registros do Passaporte Web3",
+        "Compartilhar um relato (público ou privado) sobre sua trilha",
+        "Participar de um círculo simbólico de celebração",
+        "Escolher entre: seguir para novo ciclo ou pausar com fechamento"
       ],
-      symbol: "FluxSeed #006",
+      symbol: "FluxSeed #006 - Celebraçã@",
       color: "from-emerald-400 to-teal-500",
       icon: <Gift className="w-6 h-6" />,
-      fluxSeed: "006"
+      fluxSeed: "006",
+      symbolicElements: [
+        { element: "NFT FluxSeed #006", description: "Celebraçã@ – representa o ciclo concluído" },
+        { element: "Token Círculo Vivo", description: "Libera acesso a mentorias ou Labs" },
+        { element: "Badge Tecel@", description: "Indica contribuição viva à rede" }
+      ],
+      pathways: [
+        { path: "Novo ciclo", description: "Inicia trilha temática (Ecossistemas, DAOs, NFTs etc.)" },
+        { path: "Ciclo de pausa", description: "Encerra com documentação pessoal e NFT final" },
+        { path: "Mentoria", description: "Pode se tornar facilitador ou ponto de apoio local" }
+      ],
+      reflections: [
+        "O que você levou da trilha para sua vida real?",
+        "Que relação você passou a ter com a Web3?",
+        "Que convite você deixaria para quem virá depois?"
+      ],
+      ethics: [
+        "Nenhuma trilha é final",
+        "A pausa é um direito, a continuidade é um convite",
+        "O valor está em cada vivência, não em um certificado"
+      ]
     }
   ];
 
@@ -273,7 +393,7 @@ const Journey = () => {
               )}
               
               <div className="flex items-center justify-between">
-                <span className="text-neon-blue text-sm font-medium">Ver ações</span>
+                <span className="text-neon-blue text-sm font-medium">Ver detalhes</span>
                 <Play className="w-4 h-4 text-neon-blue" />
               </div>
             </div>
@@ -299,46 +419,194 @@ const Journey = () => {
                       {block.fluxSeed && (
                         <div className="flex items-center gap-2 mt-2">
                           <Award className="w-4 h-4 text-neon-blue" />
-                          <span className="text-neon-blue text-sm font-medium">FluxSeed #{block.fluxSeed}</span>
+                          <span className="text-neon-blue text-sm font-medium">{block.symbol}</span>
                         </div>
                       )}
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                      <h5 className="font-semibold text-white mb-3">🌱 Ações do Bloco:</h5>
-                      <ul className="space-y-2">
-                        {block.actions.map((action, index) => (
-                          <li key={index} className="flex items-start gap-2 text-gray-300">
-                            <CheckCircle className="w-4 h-4 text-neon-green mt-0.5 flex-shrink-0" />
-                            <span className="text-sm">{action}</span>
-                          </li>
-                        ))}
-                      </ul>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div className="space-y-6">
+                      <div>
+                        <h5 className="font-semibold text-white mb-3 flex items-center gap-2">
+                          <Zap className="w-4 h-4 text-neon-blue" />
+                          🌱 Ações do Bloco:
+                        </h5>
+                        <ul className="space-y-2">
+                          {block.actions.map((action, index) => (
+                            <li key={index} className="flex items-start gap-2 text-gray-300">
+                              <CheckCircle className="w-4 h-4 text-neon-green mt-0.5 flex-shrink-0" />
+                              <span className="text-sm">{action}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {block.fundamentals && (
+                        <div>
+                          <h5 className="font-semibold text-white mb-3 flex items-center gap-2">
+                            <Brain className="w-4 h-4 text-neon-purple" />
+                            📚 Fundamentos Abordados:
+                          </h5>
+                          <ul className="space-y-2">
+                            {block.fundamentals.map((fundamental, index) => (
+                              <li key={index} className="flex items-start gap-2 text-gray-300">
+                                <Lightbulb className="w-4 h-4 text-neon-yellow mt-0.5 flex-shrink-0" />
+                                <span className="text-sm">{fundamental}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
+                      {block.toolsPresented && (
+                        <div>
+                          <h5 className="font-semibold text-white mb-3 flex items-center gap-2">
+                            <Wrench className="w-4 h-4 text-yellow-400" />
+                            🧩 Ferramentas Apresentadas:
+                          </h5>
+                          <div className="space-y-2">
+                            {block.toolsPresented.map((tool, index) => (
+                              <div key={index} className="p-3 glass-dark rounded-lg">
+                                <div className="font-medium text-white text-sm">{tool.name}</div>
+                                <div className="text-gray-400 text-xs">{tool.function}</div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {block.communities && (
+                        <div>
+                          <h5 className="font-semibold text-white mb-3 flex items-center gap-2">
+                            <Users className="w-4 h-4 text-red-400" />
+                            🌐 Comunidades Sugeridas:
+                          </h5>
+                          <div className="flex flex-wrap gap-2">
+                            {block.communities.map((community, index) => (
+                              <span key={index} className="px-3 py-1 bg-red-400/20 text-red-300 rounded-full text-xs">
+                                {community}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {block.contributionTypes && (
+                        <div>
+                          <h5 className="font-semibold text-white mb-3 flex items-center gap-2">
+                            <Palette className="w-4 h-4 text-cyan-400" />
+                            🌱 Tipos de Contribuição:
+                          </h5>
+                          <div className="space-y-2">
+                            {block.contributionTypes.map((contrib, index) => (
+                              <div key={index} className="p-3 glass-dark rounded-lg">
+                                <div className="font-medium text-white text-sm">{contrib.type}</div>
+                                <div className="text-gray-400 text-xs">{contrib.examples}</div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
                     
-                    <div className="space-y-4">
+                    <div className="space-y-6">
                       <div>
-                        <h5 className="font-semibold text-white mb-2">🎯 Intenção:</h5>
+                        <h5 className="font-semibold text-white mb-3 flex items-center gap-2">
+                          <Target className="w-4 h-4 text-neon-blue" />
+                          🎯 Intenção:
+                        </h5>
                         <p className="text-gray-300 text-sm">{block.description}</p>
                       </div>
-                      
-                      <div>
-                        <h5 className="font-semibold text-white mb-2">🏆 Símbolo:</h5>
-                        <p className="text-gray-300 text-sm">{block.symbol}</p>
-                      </div>
-                      
-                      {block.ritual && (
+
+                      {block.tools && block.tools.length > 0 && (
                         <div>
-                          <h5 className="font-semibold text-white mb-2">🧙 Ritual:</h5>
-                          <p className="text-gray-300 text-sm">{block.ritual}</p>
+                          <h5 className="font-semibold text-white mb-3 flex items-center gap-2">
+                            <Bot className="w-4 h-4 text-neon-green" />
+                            🛠️ Ferramentas:
+                          </h5>
+                          <div className="space-y-2">
+                            {block.tools.map((tool, index) => (
+                              <div key={index} className="p-3 glass-dark rounded-lg">
+                                <div className="font-medium text-white text-sm">{tool.name}</div>
+                                <div className="text-gray-400 text-xs">{tool.function}</div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {block.reflections && block.reflections.length > 0 && (
+                        <div>
+                          <h5 className="font-semibold text-white mb-3 flex items-center gap-2">
+                            <MessageCircle className="w-4 h-4 text-neon-purple" />
+                            🧠 Reflexões no Passaporte:
+                          </h5>
+                          <ul className="space-y-2">
+                            {block.reflections.map((reflection, index) => (
+                              <li key={index} className="flex items-start gap-2 text-gray-300">
+                                <Compass className="w-4 h-4 text-neon-purple mt-0.5 flex-shrink-0" />
+                                <span className="text-sm">{reflection}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
+                      {block.symbolicElements && (
+                        <div>
+                          <h5 className="font-semibold text-white mb-3 flex items-center gap-2">
+                            <Gift className="w-4 h-4 text-emerald-400" />
+                            🪙 Elementos Simbólicos:
+                          </h5>
+                          <div className="space-y-2">
+                            {block.symbolicElements.map((element, index) => (
+                              <div key={index} className="p-3 glass-dark rounded-lg">
+                                <div className="font-medium text-white text-sm">{element.element}</div>
+                                <div className="text-gray-400 text-xs">{element.description}</div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {block.pathways && (
+                        <div>
+                          <h5 className="font-semibold text-white mb-3 flex items-center gap-2">
+                            <Share2 className="w-4 h-4 text-emerald-400" />
+                            🌀 Encaminhamentos:
+                          </h5>
+                          <div className="space-y-2">
+                            {block.pathways.map((pathway, index) => (
+                              <div key={index} className="p-3 glass-dark rounded-lg">
+                                <div className="font-medium text-white text-sm">{pathway.path}</div>
+                                <div className="text-gray-400 text-xs">{pathway.description}</div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {block.ethics && block.ethics.length > 0 && (
+                        <div>
+                          <h5 className="font-semibold text-white mb-3 flex items-center gap-2">
+                            <Heart className="w-4 h-4 text-red-400" />
+                            🌍 Ética e Cuidado:
+                          </h5>
+                          <ul className="space-y-2">
+                            {block.ethics.map((ethic, index) => (
+                              <li key={index} className="flex items-start gap-2 text-gray-300">
+                                <Heart className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" />
+                                <span className="text-sm">{ethic}</span>
+                              </li>
+                            ))}
+                          </ul>
                         </div>
                       )}
                     </div>
                   </div>
                   
-                  <div className="mt-6 pt-6 border-t border-white/10">
+                  <div className="mt-8 pt-6 border-t border-white/10">
                     <button className="btn-primary w-full md:w-auto">
                       <Play className="w-4 h-4 mr-2" />
                       Iniciar Bloco {block.id}
