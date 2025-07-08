@@ -1,7 +1,6 @@
-import calangoicone from '../assets/imagens/calangoicone.png';
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, BookOpen } from 'lucide-react';
 
 interface NavbarProps {
   isScrolled: boolean;
@@ -18,17 +17,15 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white shadow-md py-2' 
+          ? 'bg-slate-900/95 backdrop-blur-sm shadow-lg py-2' 
           : 'bg-transparent py-4'
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/#inicio" className="flex items-center">
-          <div className="flex items-center text-primary-600">
-            <img className="w-10" src={calangoicone} alt="Icone da CalangoFlux" />
-          </div>
-          <span className="ml-2 font-heading font-bold text-xl">
-            Calango<span className="text-secondary-500">Flux</span>
+        <Link to="/" className="flex items-center">
+          <BookOpen className="w-8 h-8 text-blue-400 mr-2" />
+          <span className="font-bold text-xl text-white">
+            L3trament0<span className="text-blue-400">Web3</span>
           </span>
         </Link>
 
@@ -39,59 +36,86 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
             className={({ isActive }) => 
               `text-sm font-medium transition ${
                 isActive 
-                  ? 'text-primary-600' 
-                  : isScrolled ? 'text-gray-800 hover:text-primary-500' : 'text-gray-800 hover:text-primary-500'
+                  ? 'text-blue-400' 
+                  : 'text-gray-300 hover:text-blue-400'
               }`
             }
           >
             Início
           </NavLink>
-          <a 
-            href="#sobre" 
-            className={`text-sm font-medium transition ${
-              isScrolled ? 'text-gray-800 hover:text-primary-500' : 'text-gray-800 hover:text-primary-500'
-            }`}
+          <NavLink 
+            to="/digital-literacy" 
+            className={({ isActive }) => 
+              `text-sm font-medium transition ${
+                isActive 
+                  ? 'text-blue-400' 
+                  : 'text-gray-300 hover:text-blue-400'
+              }`
+            }
           >
-            Sobre
-          </a>
-          <a 
-            href="#servicos" 
-            className={`text-sm font-medium transition ${
-              isScrolled ? 'text-gray-800 hover:text-primary-500' : 'text-gray-800 hover:text-primary-500'
-            }`}
+            Letramento Digital
+          </NavLink>
+          <NavLink 
+            to="/public-goods" 
+            className={({ isActive }) => 
+              `text-sm font-medium transition ${
+                isActive 
+                  ? 'text-blue-400' 
+                  : 'text-gray-300 hover:text-blue-400'
+              }`
+            }
           >
-            Serviços
-          </a>
-          <a 
-            href="#impacto" 
-            
-            className={`text-sm font-medium transition ${
-              isScrolled ? 'text-gray-800 hover:text-primary-500' : 'text-gray-800 hover:text-primary-500'
-            }`}
+            Bens Públicos
+          </NavLink>
+          <NavLink 
+            to="/commons-life" 
+            className={({ isActive }) => 
+              `text-sm font-medium transition ${
+                isActive 
+                  ? 'text-blue-400' 
+                  : 'text-gray-300 hover:text-blue-400'
+              }`
+            }
           >
-            Impacto
-          </a>
-          <a 
-            href="#contato" 
-            className={`text-sm font-medium transition ${
-              isScrolled ? 'text-gray-800 hover:text-primary-500' : 'text-gray-800 hover:text-primary-500'
-            }`}
+            Commons
+          </NavLink>
+          <NavLink 
+            to="/refi" 
+            className={({ isActive }) => 
+              `text-sm font-medium transition ${
+                isActive 
+                  ? 'text-blue-400' 
+                  : 'text-gray-300 hover:text-blue-400'
+              }`
+            }
           >
-            Contato
-          </a>
+            ReFi
+          </NavLink>
+          <NavLink 
+            to="/community" 
+            className={({ isActive }) => 
+              `text-sm font-medium transition ${
+                isActive 
+                  ? 'text-blue-400' 
+                  : 'text-gray-300 hover:text-blue-400'
+              }`
+            }
+          >
+            Comunidade
+          </NavLink>
         </nav>
 
-        <a 
-          href="#contato"
-          className="hidden md:flex btn btn-primary"
+        <Link 
+          to="/journey"
+          className="hidden md:flex btn-primary"
         >
-          Fale Conosco
-        </a>
+          Começar Jornada
+        </Link>
 
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden text-gray-800 focus:outline-none"
+          className="md:hidden text-white focus:outline-none"
           aria-label="Toggle menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -100,54 +124,69 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white">
+        <div className="md:hidden bg-slate-900/95 backdrop-blur-sm">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <NavLink 
               to="/" 
               className={({ isActive }) => 
-                `text-base font-medium py-2 ${isActive ? 'text-primary-600' : 'text-gray-800'}`
+                `text-base font-medium py-2 ${isActive ? 'text-blue-400' : 'text-gray-300'}`
               }
               onClick={toggleMenu}
             >
               Início
             </NavLink>
-            <a 
-              href="#sobre" 
-              className="text-base font-medium py-2 text-gray-800"
+            <NavLink 
+              to="/digital-literacy" 
+              className={({ isActive }) => 
+                `text-base font-medium py-2 ${isActive ? 'text-blue-400' : 'text-gray-300'}`
+              }
               onClick={toggleMenu}
             >
-              Sobre
-            </a>
-            <a 
-              href="#servicos" 
-              className="text-base font-medium py-2 text-gray-800"
+              Letramento Digital
+            </NavLink>
+            <NavLink 
+              to="/public-goods" 
+              className={({ isActive }) => 
+                `text-base font-medium py-2 ${isActive ? 'text-blue-400' : 'text-gray-300'}`
+              }
               onClick={toggleMenu}
             >
-              Serviços
-            </a>
-            <a 
-              href="/#impacto" 
-              className="text-base font-medium py-2 text-gray-800"
+              Bens Públicos
+            </NavLink>
+            <NavLink 
+              to="/commons-life" 
+              className={({ isActive }) => 
+                `text-base font-medium py-2 ${isActive ? 'text-blue-400' : 'text-gray-300'}`
+              }
               onClick={toggleMenu}
             >
-              Impacto
-            </a>
-            <a 
-              href="/#contato" 
-              className="text-base font-medium py-2 text-gray-800"
+              Commons
+            </NavLink>
+            <NavLink 
+              to="/refi" 
+              className={({ isActive }) => 
+                `text-base font-medium py-2 ${isActive ? 'text-blue-400' : 'text-gray-300'}`
+              }
               onClick={toggleMenu}
             >
-              Contato
-            </a>
-            <a 
-              href="https://wa.me/5522999999999" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn btn-primary"
+              ReFi
+            </NavLink>
+            <NavLink 
+              to="/community" 
+              className={({ isActive }) => 
+                `text-base font-medium py-2 ${isActive ? 'text-blue-400' : 'text-gray-300'}`
+              }
               onClick={toggleMenu}
             >
-              Fale Conosco
-            </a>
+              Comunidade
+            </NavLink>
+            <Link 
+              to="/journey"
+              className="btn-primary"
+              onClick={toggleMenu}
+            >
+              Começar Jornada
+            </Link>
           </div>
         </div>
       )}
