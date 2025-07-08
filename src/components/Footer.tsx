@@ -4,8 +4,8 @@ import { Github, Send, Twitter, Globe, Heart, Code, Scale } from 'lucide-react';
 const Footer = () => {
   return (
     <footer className="glass border-t border-white/10 mt-20">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+      <div className="container mx-auto px-4 py-8 md:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 md:mb-12">
           {/* Brand Section */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
@@ -14,13 +14,13 @@ const Footer = () => {
               </div>
               <h3 className="text-xl font-bold gradient-text">L3trament0Web3</h3>
             </div>
-            <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
+            <p className="text-gray-300 mb-6 leading-relaxed text-sm md:text-base">
               Transformando vidas através do letramento digital, bens públicos e cultura regenerativa. 
               Uma jornada prática para o futuro descentralizado.
             </p>
             
             {/* Social Links */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3 justify-center md:justify-start">
               <a 
                 href="https://github.com/catitodev/l3trament0web3" 
                 target="_blank" 
@@ -61,56 +61,56 @@ const Footer = () => {
           </div>
           
           {/* Quick Links */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="text-lg font-semibold text-white mb-4">Aprender</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/digital-literacy" className="text-gray-400 hover:text-neon-blue transition-colors flex items-center gap-2">
+                <Link to="/digital-literacy" className="text-gray-400 hover:text-neon-blue transition-colors flex items-center gap-2 justify-center md:justify-start">
                   <span className="w-1 h-1 bg-neon-blue rounded-full"></span>
-                  Letramento Digital
+                  <span className="text-sm">Letramento Digital</span>
                 </Link>
               </li>
               <li>
-                <Link to="/public-goods" className="text-gray-400 hover:text-neon-green transition-colors flex items-center gap-2">
+                <Link to="/public-goods" className="text-gray-400 hover:text-neon-green transition-colors flex items-center gap-2 justify-center md:justify-start">
                   <span className="w-1 h-1 bg-neon-green rounded-full"></span>
-                  Bens Públicos
+                  <span className="text-sm">Bens Públicos</span>
                 </Link>
               </li>
               <li>
-                <Link to="/commons-life" className="text-gray-400 hover:text-neon-purple transition-colors flex items-center gap-2">
+                <Link to="/commons-life" className="text-gray-400 hover:text-neon-purple transition-colors flex items-center gap-2 justify-center md:justify-start">
                   <span className="w-1 h-1 bg-neon-purple rounded-full"></span>
-                  Cultura Commons
+                  <span className="text-sm">Cultura Commons</span>
                 </Link>
               </li>
               <li>
-                <Link to="/refi" className="text-gray-400 hover:text-neon-green transition-colors flex items-center gap-2">
+                <Link to="/refi" className="text-gray-400 hover:text-neon-green transition-colors flex items-center gap-2 justify-center md:justify-start">
                   <span className="w-1 h-1 bg-neon-green rounded-full"></span>
-                  ReFi
+                  <span className="text-sm">ReFi</span>
                 </Link>
               </li>
             </ul>
           </div>
           
           {/* Experience */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="text-lg font-semibold text-white mb-4">Experiência</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/journey" className="text-gray-400 hover:text-neon-blue transition-colors flex items-center gap-2">
+                <Link to="/journey" className="text-gray-400 hover:text-neon-blue transition-colors flex items-center gap-2 justify-center md:justify-start">
                   <span className="w-1 h-1 bg-neon-blue rounded-full"></span>
-                  Sua Jornada
+                  <span className="text-sm">Sua Jornada</span>
                 </Link>
               </li>
               <li>
-                <Link to="/community" className="text-gray-400 hover:text-neon-purple transition-colors flex items-center gap-2">
+                <Link to="/community" className="text-gray-400 hover:text-neon-purple transition-colors flex items-center gap-2 justify-center md:justify-start">
                   <span className="w-1 h-1 bg-neon-purple rounded-full"></span>
-                  Comunidade
+                  <span className="text-sm">Comunidade</span>
                 </Link>
               </li>
               <li>
-                <Link to="/impact" className="text-gray-400 hover:text-neon-green transition-colors flex items-center gap-2">
+                <Link to="/impact" className="text-gray-400 hover:text-neon-green transition-colors flex items-center gap-2 justify-center md:justify-start">
                   <span className="w-1 h-1 bg-neon-green rounded-full"></span>
-                  Nosso Impacto
+                  <span className="text-sm">Nosso Impacto</span>
                 </Link>
               </li>
             </ul>
@@ -118,19 +118,19 @@ const Footer = () => {
         </div>
         
         {/* Bottom Section */}
-        <div className="border-t border-white/10 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-white/10 pt-6 md:pt-8">
+          <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between">
             {/* Copyright */}
-            <div className="text-center md:text-left">
-              <p className="text-gray-400 text-sm mb-2">
+            <div className="text-center md:text-left order-2 md:order-1">
+              <p className="text-gray-400 text-xs md:text-sm mb-2">
                 © 2025 L3trament0Web3 – Construindo um futuro digital mais justo
               </p>
-              <div className="flex items-center justify-center md:justify-start gap-4 text-xs text-gray-500">
+              <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-2 sm:gap-4 text-xs text-gray-500">
                 <div className="flex items-center gap-1">
                   <Scale className="w-3 h-3" />
                   <span>MIT License</span>
                 </div>
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-1 flex-wrap justify-center">
                   <Code className="w-3 h-3" />
                   <span>Desenvolvido por</span>
                   <a 
@@ -148,7 +148,7 @@ const Footer = () => {
             </div>
             
             {/* Made with Love */}
-            <div className="flex items-center gap-2 text-gray-400 text-sm">
+            <div className="flex items-center gap-2 text-gray-400 text-xs md:text-sm order-1 md:order-2">
               <span>Feito com</span>
               <Heart className="w-4 h-4 text-red-400 animate-pulse" />
               <span>para a comunidade Web3</span>
