@@ -133,16 +133,9 @@ const Footer = () => {
                 <div className="flex items-center gap-1 flex-wrap justify-center">
                   <Code className="w-3 h-3" />
                   <span>Desenvolvido por</span>
-                  <a 
-                    href="https://github.com/catitodev" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-neon-blue hover:text-neon-purple transition-colors font-medium"
-                  >
-                    @catitodev
-                  </a>
-                  <span>&</span>
-                  <span className="text-neon-purple font-medium">CalangoFlux®</span>
+                  <span className="text-neon-blue hover:text-neon-purple transition-colors font-medium">
+                    @CalangoFluxTeam
+                  </span>
                 </div>
               </div>
             </div>
