@@ -7,6 +7,7 @@ const Bloco1 = () => {
   const [reportSubmitted, setReportSubmitted] = useState(false);
   const [reportContent, setReportContent] = useState('');
   const [reflection, setReflection] = useState('');
+  const [perfilSelecionado, setPerfilSelecionado] = useState('');
 
   const sections = [
     {
@@ -463,6 +464,38 @@ const Bloco1 = () => {
 
                 <div>
                   <label className="block text-slate-800 font-medium mb-3">
+                    🎯 Seu Perfil Exploratório
+                  </label>
+                  <p className="text-slate-600 text-sm mb-4">
+                    Com base em suas reflexões, qual perfil melhor representa seu interesse na Web3?
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                    {[
+                      { id: 'regenerativo', name: '🌱 Regenerativo', desc: 'Impacto ambiental e sustentabilidade' },
+                      { id: 'comunitario', name: '🤝 Comunitário', desc: 'Desenvolvimento social e inclusão' },
+                      { id: 'inovador', name: '💡 Inovador', desc: 'Tecnologia e soluções criativas' },
+                      { id: 'estrategico', name: '🎯 Estratégico', desc: 'Governança e políticas públicas' },
+                      { id: 'netweaver', name: '🌐 Netweaver', desc: 'Conecta perfis e comunidades' }
+                    ].map((perfil) => (
+                      <button
+                        key={perfil.id}
+                        type="button"
+                        onClick={() => setPerfilSelecionado(perfil.id)}
+                        className={`p-3 text-left border rounded-lg transition-all ${
+                          perfilSelecionado === perfil.id
+                            ? 'border-blue-500 bg-blue-50 text-blue-700'
+                            : 'border-slate-300 hover:border-slate-400 text-slate-700'
+                        }`}
+                      >
+                        <div className="font-medium text-sm">{perfil.name}</div>
+                        <div className="text-xs opacity-75">{perfil.desc}</div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-slate-800 font-medium mb-3">
                     💭 Principal Insight ou Aprendizado
                   </label>
                   <textarea
@@ -477,9 +510,9 @@ const Bloco1 = () => {
                 <div className="flex gap-4">
                   <button
                     onClick={handleReportSubmit}
-                    disabled={!reportContent.trim() || !reflection.trim()}
+                    disabled={!reportContent.trim() || !reflection.trim() || !perfilSelecionado}
                     className={`flex-1 flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-all ${
-                      reportContent.trim() && reflection.trim()
+                      reportContent.trim() && reflection.trim() && perfilSelecionado
                         ? 'bg-green-600 text-white hover:bg-green-700 shadow-lg hover:shadow-xl'
                         : 'bg-slate-300 text-slate-500 cursor-not-allowed'
                     }`}
