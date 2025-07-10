@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Github, Send, Twitter, Globe, Heart, Code, Scale } from 'lucide-react';
+import { Github, Send, Twitter, MessageCircle, Heart, Code, Scale } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -40,7 +40,7 @@ const Footer = () => {
                 <Twitter className="w-5 h-5 text-gray-400 group-hover:text-neon-blue" />
               </a>
               <a 
-                href="https://t.me/l3trament0web3" 
+                href="https://t.me/+iuz83kFmXlVjYTgx" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="w-10 h-10 glass-dark rounded-xl flex items-center justify-center hover:bg-glass-medium transition-colors group"
@@ -49,13 +49,13 @@ const Footer = () => {
                 <Send className="w-5 h-5 text-gray-400 group-hover:text-neon-green" />
               </a>
               <a 
-                href="https://manus.space" 
+                href="#" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="w-10 h-10 glass-dark rounded-xl flex items-center justify-center hover:bg-glass-medium transition-colors group"
-                aria-label="Manus Space"
+                aria-label="Discord"
               >
-                <Globe className="w-5 h-5 text-gray-400 group-hover:text-neon-purple" />
+                <MessageCircle className="w-5 h-5 text-gray-400 group-hover:text-neon-purple" />
               </a>
             </div>
           </div>
