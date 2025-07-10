@@ -14,6 +14,7 @@ import Impact from './pages/Impact';
 import GamificationDemo from './components/gamification/GamificationDemo';
 import Bloco1 from './pages/Bloco1';
 import DAORegenerativa from './pages/DAORegenerativa';
+import DAOsAtivas from './pages/DAOsAtivas';
 
 const AppContent: React.FC = () => {
   return (
@@ -31,6 +32,7 @@ const AppContent: React.FC = () => {
           <Route path="impact" element={<Impact />} />
           <Route path="trilha/bloco-1" element={<Bloco1 />} />
           <Route path="dao-regenerativa" element={<DAORegenerativa />} />
+          <Route path="daos-ativas" element={<DAOsAtivas />} />
         </Route>
         
         {/* Rota para gamificação */}

@@ -435,10 +435,13 @@ const Home = () => {
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 
-                <button className="inline-flex items-center gap-3 px-8 py-4 bg-emerald-700 text-white rounded-full hover:bg-emerald-800 transition-all duration-300 font-medium text-lg">
+                <Link 
+                  to="/daos-ativas"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-emerald-700 text-white rounded-full hover:bg-emerald-800 transition-all duration-300 font-medium text-lg"
+                >
                   <Users className="w-5 h-5" />
                   Ver DAOs Ativas
-                </button>
+                </Link>
               </div>
               
               <p className="text-emerald-200 text-sm mt-6">
